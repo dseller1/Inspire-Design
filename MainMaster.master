@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <header>
+                <h1 id="title">Inspire+Design</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="elements.aspx">Elements</a></li>
+                    <li><a href="boards.aspx">Boards</a></li>
+                    <li><a href="items.aspx">Items</a></li>
+                    <li><a href="inspiration.aspx">Inspiration</a></li>
+                </ul>
+            </nav>
+            <div id="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

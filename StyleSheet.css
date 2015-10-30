@@ -1,0 +1,193 @@
+﻿body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: lightgray;
+}
+
+.TextBox {
+    /* Styles */
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    height: 25px;
+    width: 200px;
+    /* Font settings */
+    font-weight: bold;
+    color: #8AA8BD;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: medium;
+}
+
+.DropDownList {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    /* Styles */
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    /* Font settings */
+    font-weight: bold;
+    color: #8AA8BD;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: medium;
+}
+
+#wrapper {
+    background-color: #90C7E3;
+    box-shadow: 6px 6px 0 0 #333333;
+    /*min-width: 960px;
+    max-width: 2048px;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-height: 100%;
+}
+
+header {
+    background-color: #024864;
+    color: #FFFFFF;
+    height: 60px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+    header a {
+        float: right;
+    }
+
+h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+    color: #024864;
+}
+
+nav {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    width: 100px;
+    font-weight: bold;
+    line-height: 3;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+    nav a {
+        text-decoration: none;
+        height: 40px;
+        padding: 10px 25px;
+        display: block;
+    }
+
+    nav ul {
+        margin: 0px;
+        padding-left: 0px;
+        width: 100%;
+        display: block;
+        list-style-type: none;
+        line-height: 40px;
+    }
+
+        nav ul a:link {
+            color: #000033;
+        }
+
+        nav ul a:hover {
+            background-color: #024864;
+            color: #FFFFFF;
+            width: 90%;
+        }
+
+        nav ul a:visited {
+            color: #000033;
+        }
+
+#main {
+    padding: 10px 30px 30px 10px;
+    margin-left: 140px;
+    background-color: #FFFFFF;
+    height: auto;
+    min-height: 200px;
+    width: auto;
+    min-width: 200px;
+}
+
+.Button {
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    padding: 5px 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 14px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+    .Button:hover {
+        border-top-color: #28597a;
+        background: #28597a;
+        color: #ccc;
+    }
+
+    .Button:active {
+        border-top-color: #1b435e;
+        background: #1b435e;
+    }
+
+.Label {
+    color: red;
+    padding-left: 5px;
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+
+#Elements {
+    float: left;
+    width: 50%;
+}
+
+#Principles {
+    float: right;
+    width: 50%;
+}
+
+#Buttons {
+    text-align: center;
+}
+
+.Validator {
+    color: red;
+    font-size: 14px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: bold;
+}
+.loginButtons {
+    padding-left: 20px;
+}
