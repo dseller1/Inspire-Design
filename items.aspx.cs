@@ -42,12 +42,45 @@ public partial class ItemsPage : System.Web.UI.Page
         images = product_image.queryProducts(images, el);
         int itemsCount = images.Count;
         dt.Columns.Add(new DataColumn("PictureURL1", typeof(string)));
+        dt.Columns.Add(new DataColumn("PictureURL2", typeof(string)));
+        dt.Columns.Add(new DataColumn("PictureURL3", typeof(string)));
+        dt.Columns.Add(new DataColumn("PictureURL4", typeof(string)));
         DataRow dr = dt.NewRow();
         foreach (product_image item in images)
         {
-            dr["PictureURL" + i.ToString()] = item.Image_Link;
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
+            if (i <= 4)
+            {
+                if (itemsCount != 0)
+                {
+                    dr["PictureURL" + i.ToString()] = item.Image_Link;
+                    i++;
+                    itemsCount--;
+                    if (itemsCount == 0)
+                    {
+                        dt.Rows.Add(dr);
+                    }
+                }
+                else
+                {
+                    dt.Rows.Add(dr);
+                }
+            }
+            else
+            {
+                i = 1;
+                dt.Rows.Add(dr);
+                dr = dt.NewRow();
+                if (itemsCount != 0)
+                {
+                    dr["PictureURL" + i.ToString()] = item.Image_Link;
+                    i++;
+                    itemsCount--;
+                }
+                if (itemsCount == 0)
+                {
+                    dt.Rows.Add(dr);
+                }
+            }
         }
         return dt;
     }
