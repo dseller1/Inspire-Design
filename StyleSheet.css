@@ -197,6 +197,8 @@ nav {
 .itemsGrid {
     text-align: center;
     padding: 5px 5px 5px 5px;
+    height: 251px;
+    width: 251px;
 }
 
 .ListBox {
