@@ -14,8 +14,8 @@
         <div id="wrapper">
             <header>
                 <h1 id="title">Inspire+Design
-                    <asp:ImageButton runat="server" ID="settingsBtn" OnClick="settingsBtn_Click" ImageUrl="~/Images/settings.png" Height="36px" Width="36px" />
-                    <asp:Button runat="server" ID="logoutBtn" OnClick="logoutBtn_Click" Text="Logout"/></h1>
+                    <asp:ImageButton runat="server" ID="settingsBtn" OnClick="settingsBtn_Click" ImageUrl="~/Images/settings.png" CausesValidation="false" Height="36px" Width="36px" />
+                    <asp:Button runat="server" ID="logoutBtn" OnClick="logoutBtn_Click" CausesValidation="false" Text="Logout"/></h1>
             </header>
             <nav>
                 <ul>

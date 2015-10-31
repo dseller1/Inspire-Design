@@ -27,6 +27,18 @@ public partial class account : System.Web.UI.Page
         emailAddressLbl.Text = curUser.Email;
         phoneLbl.Text = curUser.Phone;
         designerLbl.Text = curUser.Designer;
+        passwordFieldValidator.ControlToValidate = "passwordTxt";
+        cnfrmPassFieldValidator.ControlToValidate = "cnfrmPassTxt";
+        changeEmailFieldValidator.ControlToValidate = "emailAddressTxt";
+        if (curUser.Account_Type == "client")
+        {
+            clientPnl.Visible = true;
+        }
+        else
+        {
+            designerPnl.Visible = true;
+            user.loadClients(userInfoColl, clientList, curUser);
+        }
     }
     protected void changeEmailBtn_Click(object sender, EventArgs e)
     {
@@ -48,6 +60,8 @@ public partial class account : System.Web.UI.Page
     }
     protected void changeEmailYesBtn_Click(object sender, ImageClickEventArgs e)
     {
+        passwordFieldValidator.ControlToValidate = null;
+        cnfrmPassFieldValidator.ControlToValidate = null;
         myDB.updateUserEmailDoc(userInfoColl, curUser, emailAddressTxt.Text);
         changeEmailYesBtn.Visible = false;
         changeEmailNoBtn.Visible = false;
@@ -103,16 +117,48 @@ public partial class account : System.Web.UI.Page
     }
     protected void changePassYesBtn_Click(object sender, ImageClickEventArgs e)
     {
+        changeEmailFieldValidator.ControlToValidate = null;
         if (passwordTxt.Text == cnfrmPassTxt.Text)
         {
             myDB.updateUserPassDoc(userInfoColl, curUser, passwordTxt.Text);
+            passwordTxt.Visible = false;
+            cnfrmPassPnl.Visible = false;
+            changePassYesBtn.Visible = false;
+            changePassNoBtn.Visible = false;
+            changePassBtn.Visible = true;
+            passwordLbl.Visible = true;
         }
-        passwordTxt.Visible = false;
-        cnfrmPassPnl.Visible = false;
-        changePassYesBtn.Visible = false;
-        changePassNoBtn.Visible = false;
-        changePassBtn.Visible = true;
-        passwordLbl.Visible = true;
+        else
+        {
+            passErrorLbl.Text = "Passwords do not match.";
+        }
     }
+    protected void addClientBtn_Click(object sender, EventArgs e)
+    {
+        addClientTxt.Text = "";
+        addClientBtn.Visible = false;
+        addClientTxt.Visible = true;
+        addClientYesBtn.Visible = true;
+        addClientNoBtn.Visible = true;
+    }
+    protected void addClientNoBtn_Click(object sender, ImageClickEventArgs e)
+    {
+        addClientTxt.Visible = false;
+        addClientYesBtn.Visible = false;
+        addClientNoBtn.Visible = false;
+        addClientBtn.Visible = true;
+        errorLbl.Text = "";
+    }
+    protected void addClientYesBtn_Click(object sender, ImageClickEventArgs e)
+    {
 
+        if (myDB.addClient(userInfoColl, curUser, addClientTxt.Text, errorLbl) == true)
+        {
+            addClientTxt.Visible = false;
+            addClientYesBtn.Visible = false;
+            addClientNoBtn.Visible = false;
+            addClientBtn.Visible = true;
+            Response.Redirect(Request.RawUrl);
+        }
+    }
 }

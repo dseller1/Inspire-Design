@@ -198,3 +198,7 @@ nav {
     text-align: center;
     padding: 5px 5px 5px 5px;
 }
+
+.ListBox {
+    width: 100px;
+}
