@@ -37,15 +37,7 @@ public partial class account : System.Web.UI.Page
         changeEmailNoBtn.Visible = true;
         changeEmailYesBtn.Visible = true;
     }
-    protected void changePhoneBtn_Click(object sender, EventArgs e)
-    {
-        phoneLbl.Visible = false;
-        phoneTxt.Visible = true;
-        phoneTxt.Text = curUser.Phone;
-        changePhoneBtn.Visible = false;
-        changePhoneNoBtn.Visible = true;
-        changePhoneYesBtn.Visible = true;
-    }
+
     protected void changeEmailNoBtn_Click(object sender, ImageClickEventArgs e)
     {
         emailAddressTxt.Visible = false;
@@ -62,7 +54,16 @@ public partial class account : System.Web.UI.Page
         emailAddressTxt.Visible = false;
         emailAddressLbl.Visible = true;
         changeEmailBtn.Visible = true;
-        Response.Redirect(Request.RawUrl); 
+        Response.Redirect(Request.RawUrl);
+    }
+    protected void changePhoneBtn_Click(object sender, EventArgs e)
+    {
+        phoneLbl.Visible = false;
+        phoneTxt.Visible = true;
+        phoneTxt.Text = curUser.Phone;
+        changePhoneBtn.Visible = false;
+        changePhoneNoBtn.Visible = true;
+        changePhoneYesBtn.Visible = true;
     }
     protected void changePhoneNoBtn_Click(object sender, ImageClickEventArgs e)
     {
@@ -80,6 +81,38 @@ public partial class account : System.Web.UI.Page
         phoneTxt.Visible = false;
         changePhoneBtn.Visible = true;
         phoneLbl.Visible = true;
-        Response.Redirect(Request.RawUrl); 
+        Response.Redirect(Request.RawUrl);
     }
+    protected void changePassBtn_Click(object sender, EventArgs e)
+    {
+        passwordLbl.Visible = false;
+        changePassBtn.Visible = false;
+        passwordTxt.Visible = true;
+        changePassYesBtn.Visible = true;
+        changePassNoBtn.Visible = true;
+        cnfrmPassPnl.Visible = true;
+    }
+    protected void changePassNoBtn_Click(object sender, ImageClickEventArgs e)
+    {
+        cnfrmPassPnl.Visible = false;
+        changePassNoBtn.Visible = false;
+        changePassYesBtn.Visible = false;
+        passwordTxt.Visible = false;
+        passwordLbl.Visible = true;
+        changePassBtn.Visible = true;
+    }
+    protected void changePassYesBtn_Click(object sender, ImageClickEventArgs e)
+    {
+        if (passwordTxt.Text == cnfrmPassTxt.Text)
+        {
+            myDB.updateUserPassDoc(userInfoColl, curUser, passwordTxt.Text);
+        }
+        passwordTxt.Visible = false;
+        cnfrmPassPnl.Visible = false;
+        changePassYesBtn.Visible = false;
+        changePassNoBtn.Visible = false;
+        changePassBtn.Visible = true;
+        passwordLbl.Visible = true;
+    }
+
 }

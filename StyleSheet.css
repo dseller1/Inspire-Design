@@ -186,6 +186,10 @@ nav {
 .loginButtons {
     padding-left: 20px;
 }
-.title {
+#title {
     text-align: center;
+}
+
+.Account-Label {
+    width: 100px;
 }
