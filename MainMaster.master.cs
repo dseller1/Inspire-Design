@@ -11,4 +11,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
 
     }
+    protected void logoutBtn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/login.aspx");
+    }
+
+    protected void settingsBtn_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("~/account.aspx");
+    }
 }

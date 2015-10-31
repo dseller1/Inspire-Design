@@ -29,7 +29,6 @@ public partial class ElementsPage : System.Web.UI.Page
         myDB = (database)Session["myDB"];
         curUser = (user)Session["curUser"];
         designUser = (user)Session["designUser"];
-
         userInfoColl = myDB.getUserInfoCollection();
         imgColl = myDB.getImagesCollection();
         allItems = p.getItems(imgColl);

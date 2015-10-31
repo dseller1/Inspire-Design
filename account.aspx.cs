@@ -5,23 +5,28 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MongoDB.Driver;
-using MongoDB.Bson;
+using database_class;
+using board_class;
 using product_class;
 using user_class;
 using elements_class;
-using database_class;
 
 public partial class account : System.Web.UI.Page
 {
     database myDB;
     user curUser;
+    IMongoCollection<user> userInfoColl;
     protected void Page_Load(object sender, EventArgs e)
     {
         myDB = (database)Session["myDB"];
         curUser = (user)Session["curUser"];
+        userInfoColl = myDB.getUserInfoCollection();
+        curUser = user.findUser(userInfoColl, curUser.Username);
+        Session["curUser"] = curUser;
         usernameLbl.Text = curUser.Username;
         emailAddressLbl.Text = curUser.Email;
         phoneLbl.Text = curUser.Phone;
+        designerLbl.Text = curUser.Designer;
     }
     protected void changeEmailBtn_Click(object sender, EventArgs e)
     {
@@ -51,7 +56,13 @@ public partial class account : System.Web.UI.Page
     }
     protected void changeEmailYesBtn_Click(object sender, ImageClickEventArgs e)
     {
-        
+        myDB.updateUserEmailDoc(userInfoColl, curUser, emailAddressTxt.Text);
+        changeEmailYesBtn.Visible = false;
+        changeEmailNoBtn.Visible = false;
+        emailAddressTxt.Visible = false;
+        emailAddressLbl.Visible = true;
+        changeEmailBtn.Visible = true;
+        Response.Redirect(Request.RawUrl); 
     }
     protected void changePhoneNoBtn_Click(object sender, ImageClickEventArgs e)
     {
@@ -63,6 +74,12 @@ public partial class account : System.Web.UI.Page
     }
     protected void changePhoneYesBtn_Click(object sender, ImageClickEventArgs e)
     {
-
+        myDB.updateUserPhoneDoc(userInfoColl, curUser, phoneTxt.Text);
+        changePhoneYesBtn.Visible = false;
+        changePhoneNoBtn.Visible = false;
+        phoneTxt.Visible = false;
+        changePhoneBtn.Visible = true;
+        phoneLbl.Visible = true;
+        Response.Redirect(Request.RawUrl); 
     }
 }

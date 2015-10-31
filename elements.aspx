@@ -146,5 +146,4 @@
             <asp:Label ID="label1" runat="server" class="Label" ></asp:Label>
         </div>
     </asp:Panel>
-    <asp:Button ID="accountsBtn" runat="server" Text="Account" OnClick="accountsBtn_Click" />
 </asp:Content>

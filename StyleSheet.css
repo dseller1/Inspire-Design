@@ -55,12 +55,7 @@ header {
     color: #FFFFFF;
     height: 60px;
     padding-top: 20px;
-    text-align: center;
 }
-
-    header a {
-        float: right;
-    }
 
 h1 {
     margin-bottom: 0;
@@ -190,4 +185,7 @@ nav {
 }
 .loginButtons {
     padding-left: 20px;
+}
+.title {
+    text-align: center;
 }

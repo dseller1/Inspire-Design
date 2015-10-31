@@ -24,15 +24,4 @@ public partial class inspiration : System.Web.UI.Page
         curUser = (user)Session["curUser"];
         usersBoardColl = myDB.getUsersBoardCollection(curUser);
     }
-    protected void showImage_Click(object sender, EventArgs e)
-    {
-        List<board_item> items = usersBoardColl.Find(itm => itm.Board_Name == boardName && itm.Type == "Chair")
-            .Limit(1)
-             .ToListAsync()
-             .Result;
-        foreach (board_item itm in items)
-        {
-            
-        }
-    }
 }
