@@ -20,21 +20,24 @@ public partial class MainPage : System.Web.UI.Page
     elements el;
     product_image p = new product_image();
     board_item myBoard = new board_item();
-    List<product_image> allItems;
+    List<product_image> queryItems;
     IMongoCollection<board_item> usersBoardColl;
     user curUser;
+    int i;
     string boardName;
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        i = (int)Session["i"];
         el = (elements)Session["el"];
         myDB = (database)Session["myDB"];
         curUser = (user)Session["curUser"];
         boardName = (string)Session["boardName"];
-        allItems = (List<product_image>)Session["allItems"];
+        queryItems = (List<product_image>)Session["queryItems"];
         usersBoardColl = myDB.getUsersBoardCollection(curUser);
         p = (product_image)Session["p"];
         setImage(p);
+        
     }
     public void setImage(product_image p)
     {
@@ -52,18 +55,36 @@ public partial class MainPage : System.Web.UI.Page
         {
             displayLbl.Text = "Item already exists in current board.";
         }
-        p = p.findProduct(allItems, myDB, el);
-        setImage(p);
-        Session["p"] = p;
-        Session["myDB"] = myDB;
-
+        i++;
+        if (i > queryItems.Count())
+        {
+            imagePnl.Visible = false;
+            errorPnl.Visible = true;
+        }
+        else
+        {
+            p = queryItems[i];
+            setImage(p);
+            Session["p"] = p;
+            Session["i"] = i;
+        }
     }
     protected void xButton_Click(object sender, ImageClickEventArgs e)
     {
         displayLbl.Text = "";
-        p = p.findProduct(allItems, myDB, el);
-        setImage(p);
-        Session["p"] = p;
+        i++;
+        if (i > queryItems.Count() - 1)
+        {
+            imagePnl.Visible = false;
+            errorPnl.Visible = true;
+        }
+        else
+        {
+            p = queryItems[i];
+            setImage(p);
+            Session["p"] = p;
+            Session["i"] = i;
+        }
     }
     protected void showBoardsBtn_Click(object sender, EventArgs e)
     {
@@ -81,9 +102,12 @@ public partial class MainPage : System.Web.UI.Page
     {
         Response.Redirect("~/elements.aspx");
     }
-
     protected void showInspiration_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/inspiration.aspx");
+    }
+    protected void backToElementsBtn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/elements.aspx");
     }
 }

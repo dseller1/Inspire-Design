@@ -70,7 +70,6 @@ public partial class StartPage : System.Web.UI.Page
 
     protected void registerBtn_Click(object sender, EventArgs e)
     {
-        usernameFieldValidator.ControlToValidate = null;
         Response.Redirect("~/register.aspx");
     }
 }

@@ -53,7 +53,8 @@ public partial class ItemsPage : System.Web.UI.Page
     }
     protected void showItemsBtn_Click(object sender, EventArgs e)
     {
-        elements.setElements(colorList, lineList, lightList, formList, spaceList, textureList, patternList, massList, balanceList, unityList, harmonyList, rhythmList, proportionList, varietyList, emphasisList, scaleList, typeList, el);
+        Page page = (Page)HttpContext.Current.Handler;
+        elements.setElements(colorList, lineList, lightList, formList, spaceList, textureList, patternList, massList, balanceList, unityList, harmonyList, rhythmList, proportionList, varietyList, emphasisList, scaleList, typeList, el, page);
         Page.DataBind();
     }
     protected void backToElementsBtn_Click(object sender, EventArgs e)

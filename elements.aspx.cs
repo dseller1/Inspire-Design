@@ -67,12 +67,18 @@ public partial class ElementsPage : System.Web.UI.Page
     }
     protected void elementsBtn_Click(object sender, EventArgs e)
     {
-        elements.setElements(colorList, lineList, lightList, formList, spaceList, textureList, patternList, massList, balanceList, unityList, harmonyList, rhythmList, proportionList, varietyList, emphasisList, scaleList, typeList, el);
+        Page page = (Page)HttpContext.Current.Handler;
+        elements.setElements(colorList, lineList, lightList, formList, spaceList, textureList, patternList, massList, balanceList, unityList, harmonyList, rhythmList, proportionList, varietyList, emphasisList, scaleList, typeList, el, page);
         Session["el"] = el;
-        p = p.findProduct(allItems, myDB, el);
+        List<product_image> queryItems = allItems;
+        queryItems = product_image.queryProducts(queryItems, el);
+        p = queryItems[0];
         if (p.ID != 0)
         {
+            int i = 0;
+            Session["i"] = i;
             Session["p"] = p;
+            Session["queryItems"] = queryItems;
             Response.Redirect("~/main.aspx");
         }
         else
