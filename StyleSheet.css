@@ -12,7 +12,7 @@
     cursor: pointer;
     outline: none;
     height: 25px;
-    width: 200px;
+    width: 175px;
     /* Font settings */
     font-weight: bold;
     color: #8AA8BD;
@@ -93,7 +93,7 @@ nav {
     nav ul {
         margin: 0px;
         padding-left: 0px;
-        width: 100%;
+        width: 139%;
         display: block;
         list-style-type: none;
         line-height: 40px;
@@ -101,7 +101,8 @@ nav {
 
         nav ul a:link {
             color: #000033;
-        }
+    width: 91px;
+}
 
         nav ul a:hover {
             background-color: #024864;
@@ -186,10 +187,14 @@ nav {
 .loginButtons {
     padding-left: 20px;
 }
-#title {
-    text-align: center;
+#heading {
+    display: inline;
+    padding-left: 40%;
 }
-
+#settings {
+    display: inline;
+    padding-left: 30%;
+}
 .Account-Label {
     width: 100px;
 }

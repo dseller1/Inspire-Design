@@ -14,7 +14,7 @@
     </div>
     <div>
         <br />
-        <asp:Label runat="server" Width="77px"/>
+        <asp:Label runat="server" Width="67px"/>
         <asp:Button ID="loginBtn" runat="server" OnClick="loginBtn_Click" Text="Login" class="Button" Width="75px" />
         <asp:Label runat="server" Width="30px"/>
         <asp:Button ID="registerBtn" runat="server" OnClick="registerBtn_Click" CausesValidation="false" Text="Register" class="Button" Width="100px" />

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Inspire+Design</title>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -13,9 +13,13 @@
     <form id="form1" runat="server">
         <div id="wrapper">
             <header>
-                <h1 id="title">Inspire+Design
-                    <asp:ImageButton runat="server" ID="settingsBtn" OnClick="settingsBtn_Click" ImageUrl="~/Images/settings.png" CausesValidation="false" Height="36px" Width="36px" />
-                    <asp:Button runat="server" ID="logoutBtn" OnClick="logoutBtn_Click" CausesValidation="false" Text="Logout"/></h1>
+                <h1 id="heading">Inspire+Design</h1>
+                <div id="settings">
+                    <asp:ImageButton runat="server" ID="settingsBtn" OnClick="settingsBtn_Click" ImageUrl="~/Images/settings.png" CssClass="settings" CausesValidation="false" Height="36px" Width="36px" />
+                <asp:Button runat="server" ID="logoutBtn" OnClick="logoutBtn_Click" CausesValidation="false" Text="Logout" />
+                </div>
+                
+
             </header>
             <nav>
                 <ul>
