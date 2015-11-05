@@ -187,6 +187,9 @@ nav {
 .loginButtons {
     padding-left: 20px;
 }
+#title {
+    text-align: center;
+}
 #heading {
     display: inline;
     padding-left: 40%;
