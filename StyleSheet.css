@@ -212,3 +212,33 @@ nav {
 .ListBox {
     width: 100px;
 }
+
+.colorSwatch {
+    height: 120px;
+    width: 120px;
+}
+
+.chairSwatch {
+    height: 187px;
+    width: 187px;
+}
+
+.rugSwatch {
+    height: 187px;
+    width: 187px;
+}
+
+.roomSwatch {
+    height: 144px;
+    width: 144px;
+}
+
+.patternSwatch {
+    height: 166px;
+    width: 166px;
+}
+
+.ottomanSwatch {
+    height: 187px;
+    width: 187px;
+}
