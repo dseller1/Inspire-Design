@@ -38,6 +38,7 @@ public partial class inspiration : System.Web.UI.Page
         if (curUser.Account_Type == "designer")
         {
             userPnl.Visible = true;
+            switchUserBtn.Visible = true;
         }
         boardNameLbl.Text = boardName;
         userNameLbl.Text = curUser.Username;
@@ -49,7 +50,15 @@ public partial class inspiration : System.Web.UI.Page
         else
         {
             boardPnl.Visible = false;
-            changeBoardPnl.Visible = true;
+            if (curUser.Account_Type == "designer")
+            {
+                switchUserPnl.Visible = true;
+            }
+            else
+            {
+                changeBoardPnl.Visible = true;
+            }
+            
         }
         
     }
