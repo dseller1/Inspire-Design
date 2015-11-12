@@ -24,6 +24,7 @@ public partial class inspiration : System.Web.UI.Page
         curUser = (user)Session["curUser"];
         usersBoardColl = myDB.getUsersBoardCollection(curUser);
         boardNameLbl.Text = boardName;
+        board_item.loadBoards(usersBoardColl, boardNameList);
         loadColors(usersBoardColl, boardName);
         loadChairs(usersBoardColl, boardName);
         loadRugs(usersBoardColl, boardName);
@@ -190,8 +191,15 @@ public partial class inspiration : System.Web.UI.Page
     }
     protected void boardSbmtBtn_Click(object sender, EventArgs e)
     {
-        boardName = boardNameList.SelectedItem.Value;
-        changeBoardPnl.Visible = false;
-        boardPnl.Visible = true;
+        if (boardNameList.SelectedItem.Value != "null")
+        {
+            boardName = boardNameList.SelectedItem.Value;
+            changeBoardPnl.Visible = false;
+            boardPnl.Visible = true;  
+        }
+        else
+        {
+            boardLbl.Text = "Please select a board.";
+        }
     }
 }
