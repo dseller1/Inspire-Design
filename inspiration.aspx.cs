@@ -39,6 +39,7 @@ public partial class inspiration : System.Web.UI.Page
         {
             userPnl.Visible = true;
             switchUserBtn.Visible = true;
+            user.loadUsers(userInfoColl, designerUserList, curUser);
         }
         boardNameLbl.Text = boardName;
         userNameLbl.Text = curUser.Username;
