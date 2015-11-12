@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div>
+        <asp:Label ID="boardLbl" runat="server" Text="Selected Board: "></asp:Label>
+        <asp:Label ID="boardNameLbl" runat="server"></asp:Label>
+    </div>
     <asp:Image ID="colorPlace1" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace2" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace3" runat="server" CssClass="colorSwatch" />

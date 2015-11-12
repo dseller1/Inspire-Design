@@ -23,6 +23,7 @@ public partial class inspiration : System.Web.UI.Page
         boardName = (string)Session["boardName"];
         curUser = (user)Session["curUser"];
         usersBoardColl = myDB.getUsersBoardCollection(curUser);
+        boardNameLbl.Text = boardName;
         loadColors(usersBoardColl, boardName);
         loadChairs(usersBoardColl, boardName);
         loadRugs(usersBoardColl, boardName);
