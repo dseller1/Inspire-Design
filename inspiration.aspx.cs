@@ -17,14 +17,33 @@ public partial class inspiration : System.Web.UI.Page
     string boardName;
     user curUser;
     IMongoCollection<board_item> usersBoardColl;
+    user designUser;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         myDB = (database)Session["myDB"];
         boardName = (string)Session["boardName"];
         curUser = (user)Session["curUser"];
-        usersBoardColl = myDB.getUsersBoardCollection(curUser);
+        designUser = (user)Session["designUser"];
+        if (curUser.Account_Type == "designer")
+        {
+            userPnl.Visible = true;
+        }
         boardNameLbl.Text = boardName;
+        userNameLbl.Text = curUser.Username;
         board_item.loadBoards(usersBoardColl, boardNameList);
+        if (boardName != null)
+        {
+            loadImages(usersBoardColl, boardName);
+        }
+        else
+        {
+            changeBoardPnl.Visible = true;
+        }
+        
+    }
+    public void loadImages(IMongoCollection<board_item> coll, string boardName)
+    {
         loadColors(usersBoardColl, boardName);
         loadChairs(usersBoardColl, boardName);
         loadRugs(usersBoardColl, boardName);
@@ -32,7 +51,6 @@ public partial class inspiration : System.Web.UI.Page
         loadRooms(usersBoardColl, boardName);
         loadOttomans(usersBoardColl, boardName);
     }
-    
     public void loadColors(IMongoCollection<board_item> coll, string boardName)
     {
         List<board_item> colors = coll.Find(brd => brd.Type == "Color" && brd.Board_Name == boardName)
@@ -195,7 +213,8 @@ public partial class inspiration : System.Web.UI.Page
         {
             boardName = boardNameList.SelectedItem.Value;
             changeBoardPnl.Visible = false;
-            boardPnl.Visible = true;  
+            boardPnl.Visible = true;
+            loadImages(usersBoardColl, boardName);
         }
         else
         {

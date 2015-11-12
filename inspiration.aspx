@@ -4,7 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:Panel ID="boardPnl" runat="server" Visible="true">
-        <asp:Label ID="boardLbl" runat="server" Text="Selected Board: "></asp:Label>
+        <asp:Panel ID="userPnl" runat="server" Visible="false">
+            <asp:Label ID="userLbl" runat="server" Text="Selected User: "/>
+        <asp:Label ID="userNameLbl" runat="server"/>
+        </asp:Panel>
+        <asp:Label ID="boardLbl" runat="server" Text="Selected Board: " />
         <asp:Label ID="boardNameLbl" runat="server"></asp:Label><br />
         <asp:Button ID="changeBoardBtn" runat="server" Text="Change Board" CssClass="Button" Height="35px" Width="123px" OnClick="changeBoardBtn_Click" />
     </asp:Panel>
@@ -15,6 +19,7 @@
         <asp:Button ID="boardSbmtBtn" runat="server" CssClass="Button" OnClick="boardSbmtBtn_Click" Text="Display Board" Width="115px" />
         <asp:Label ID="boardErrLbl" runat="server" CssClass="Label"></asp:Label>
     </asp:Panel>
+
     <asp:Image ID="colorPlace1" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace2" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace3" runat="server" CssClass="colorSwatch" />
