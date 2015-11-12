@@ -251,6 +251,7 @@ public partial class inspiration : System.Web.UI.Page
             usersBoardColl = myDB.getUsersBoardCollection(designUser);
             board_item.loadBoards(usersBoardColl, boardNameList);
             changeBoardPnl.Visible = true;
+            switchUserPnl.Visible = false;
         }
         else
         {
