@@ -46,6 +46,7 @@ public partial class inspiration : System.Web.UI.Page
         }
         else
         {
+            boardPnl.Visible = false;
             changeBoardPnl.Visible = true;
         }
         
@@ -220,6 +221,7 @@ public partial class inspiration : System.Web.UI.Page
         if (boardNameList.SelectedItem.Value != "null")
         {
             boardName = boardNameList.SelectedItem.Value;
+            Session["boardName"] = boardName;
             changeBoardPnl.Visible = false;
             boardPnl.Visible = true;
             loadImages(usersBoardColl, boardName);
