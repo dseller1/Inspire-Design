@@ -19,7 +19,6 @@
         <asp:Button ID="boardSbmtBtn" runat="server" CssClass="Button" OnClick="boardSbmtBtn_Click" Text="Display Board" Width="115px" />
         <asp:Label ID="boardErrLbl" runat="server" CssClass="Label"></asp:Label>
     </asp:Panel>
-
     <asp:Image ID="colorPlace1" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace2" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace3" runat="server" CssClass="colorSwatch" />

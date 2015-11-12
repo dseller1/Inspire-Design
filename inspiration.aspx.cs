@@ -25,6 +25,14 @@ public partial class inspiration : System.Web.UI.Page
         boardName = (string)Session["boardName"];
         curUser = (user)Session["curUser"];
         designUser = (user)Session["designUser"];
+        if (designUser != null)
+        {
+            usersBoardColl = myDB.getUsersBoardCollection(designUser);
+        }
+        else
+        {
+            usersBoardColl = myDB.getUsersBoardCollection(curUser);
+        }
         if (curUser.Account_Type == "designer")
         {
             userPnl.Visible = true;
