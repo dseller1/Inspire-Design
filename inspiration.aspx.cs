@@ -182,5 +182,16 @@ public partial class inspiration : System.Web.UI.Page
             }
         }
     }
-    
+
+    protected void changeBoardBtn_Click(object sender, EventArgs e)
+    {
+        boardPnl.Visible = false;
+        changeBoardPnl.Visible = true;
+    }
+    protected void boardSbmtBtn_Click(object sender, EventArgs e)
+    {
+        boardName = boardNameList.SelectedItem.Value;
+        changeBoardPnl.Visible = false;
+        boardPnl.Visible = true;
+    }
 }
