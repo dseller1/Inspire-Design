@@ -220,8 +220,9 @@ public partial class inspiration : System.Web.UI.Page
     {
         if (boardNameList.SelectedItem.Value != "null")
         {
-            boardName = boardNameList.SelectedItem.Value.ToString();
+            boardName = boardNameList.SelectedItem.Value;
             Session["boardName"] = boardName;
+            boardNameLbl.Text = boardName;
             changeBoardPnl.Visible = false;
             boardPnl.Visible = true;
             loadImages(usersBoardColl, boardName);
