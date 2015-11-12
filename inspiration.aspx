@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:Panel ID="boardPnl" runat="server" Visible="true">
         <asp:Panel ID="userPnl" runat="server" Visible="false">
-            <asp:Label ID="userLbl" runat="server" Text="Selected User: "/>
-        <asp:Label ID="userNameLbl" runat="server"/>
+            <asp:Label ID="userLbl" runat="server" Text="Selected User: " />
+            <asp:Label ID="userNameLbl" runat="server" />
         </asp:Panel>
         <asp:Label ID="boardLbl" runat="server" Text="Selected Board: " />
         <asp:Label ID="boardNameLbl" runat="server"></asp:Label><br />
@@ -17,7 +17,16 @@
             <asp:ListItem Text="Select Board.." Value="null"></asp:ListItem>
         </asp:DropDownList>
         <asp:Button ID="boardSbmtBtn" runat="server" CssClass="Button" OnClick="boardSbmtBtn_Click" Text="Display Board" Width="115px" />
+        <asp:Button ID="switchUserBtn" runat="server" CssClass="Button" OnClick="switchUserBtn_Click" Text="Switch User" Width="107px" Visible="false" />
         <asp:Label ID="boardErrLbl" runat="server" CssClass="Label"></asp:Label>
+    </asp:Panel>
+    <asp:Panel ID="switchUserPnl" runat="server" Visible="false">
+        <asp:DropDownList ID="designerUserList" runat="server" CssClass="DropDownList">
+            <asp:ListItem Text="Select User.." Value="null"></asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;&nbsp;
+            <asp:Button ID="selectUsrBtn" runat="server" Text="Select User" OnClick="selectUsrBtn_Click" CssClass="Button" Width="110px" />
+        <asp:Label ID="userErrLbl" runat="server" CssClass="Label"></asp:Label>
     </asp:Panel>
     <asp:Image ID="colorPlace1" runat="server" CssClass="colorSwatch" />
     <asp:Image ID="colorPlace2" runat="server" CssClass="colorSwatch" />

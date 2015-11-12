@@ -7,19 +7,19 @@
         <asp:DropDownList ID="boardNameList" runat="server" CssClass="DropDownList">
             <asp:ListItem Text="Select Board.." Value="null"></asp:ListItem>
         </asp:DropDownList>
-        <asp:Label ID="boardLbl" runat="server" class="Label"></asp:Label>
+        <asp:Label ID="boardLbl" runat="server" CssClass="Label"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="chooseBrdBtn" runat="server" Text="Select Board" OnClick="chooseBrdBtn_Click" class="Button" Width="110px" />
+        <asp:Button ID="chooseBrdBtn" runat="server" Text="Select Board" OnClick="chooseBrdBtn_Click" CssClass="Button" Width="110px" />
         &nbsp;&nbsp;
-        <asp:Button ID="createBoardBtn" runat="server" Text="Create Board" OnClick="createBoardBtn_Click" class="Button" Width="110px" />
+        <asp:Button ID="createBoardBtn" runat="server" Text="Create Board" OnClick="createBoardBtn_Click" CssClass="Button" Width="110px" />
         &nbsp;
         
         <asp:Panel ID="newBoardPnl" runat="server" Visible="false" Width="413px" HorizontalAlign="Left">
             <br />
             <asp:TextBox ID="newBoardTxt" runat="server" Width="150px" CssClass="TextBox"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="newBoardBtn" runat="server" Text="Submit" OnClick="newBoardBtn_Click" class="Button" />
+            <asp:Button ID="newBoardBtn" runat="server" Text="Submit" OnClick="newBoardBtn_Click" CssClass="Button" />
         </asp:Panel>
     </asp:Panel>
     <asp:Panel ID="designerPnl" runat="server" Visible="false">
@@ -29,7 +29,7 @@
             </asp:DropDownList>
             &nbsp;&nbsp;
             <asp:Button ID="selectUsrBtn" runat="server" Text="Select User" OnClick="selectUsrBtn_Click" CssClass="Button" Width="110px" />
-            <asp:Label ID="userLbl" runat="server" class="Label"></asp:Label>
+            <asp:Label ID="userLbl" runat="server" CssClass="Label"></asp:Label>
         </asp:Panel>
     </asp:Panel>
     <asp:Panel ID="optionsPnl" runat="server" Visible="false">

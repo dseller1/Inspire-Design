@@ -17,6 +17,7 @@ public partial class inspiration : System.Web.UI.Page
     string boardName;
     user curUser;
     IMongoCollection<board_item> usersBoardColl;
+    IMongoCollection<user> userInfoColl;
     user designUser;
 
     protected void Page_Load(object sender, EventArgs e)
@@ -25,6 +26,7 @@ public partial class inspiration : System.Web.UI.Page
         boardName = (string)Session["boardName"];
         curUser = (user)Session["curUser"];
         designUser = (user)Session["designUser"];
+        userInfoColl = myDB.getUserInfoCollection();
         if (designUser != null)
         {
             usersBoardColl = myDB.getUsersBoardCollection(designUser);
@@ -231,5 +233,34 @@ public partial class inspiration : System.Web.UI.Page
         {
             boardErrLbl.Text = "Please select a board.";
         }
+    }
+    protected void selectUsrBtn_Click(object sender, EventArgs e)
+    {
+        if (designerUserList.SelectedItem.Value != "null")
+        {
+            designUser = user.findUser(userInfoColl, designerUserList.SelectedItem.Text);
+            Session["designUser"] = designUser;
+            usersBoardColl = myDB.getUsersBoardCollection(designUser);
+            board_item.loadBoards(usersBoardColl, boardNameList);
+            userPnl.Visible = false;
+            boardPnl.Visible = true;
+        }
+        else
+        {
+            userLbl.Text = "Please select a user.";
+        }
+    }
+    protected void switchUserBtn_Click(object sender, EventArgs e)
+    {
+        userErrLbl.Text = "";
+        designerUserList.ClearSelection();
+        ListItem def = boardNameList.Items[0];
+        boardNameList.Items.Clear();
+        boardNameList.Items.Add(def);
+        boardNameList.ClearSelection();
+        boardPnl.Visible = false;
+        changeBoardPnl.Visible = false;
+        switchUserPnl.Visible = true;
+
     }
 }
