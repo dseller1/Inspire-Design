@@ -59,9 +59,7 @@ public partial class inspiration : System.Web.UI.Page
             {
                 changeBoardPnl.Visible = true;
             }
-            
-        }
-        
+        }    
     }
     public void loadImages(IMongoCollection<board_item> coll, string boardName)
     {
