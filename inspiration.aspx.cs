@@ -220,7 +220,7 @@ public partial class inspiration : System.Web.UI.Page
     {
         if (boardNameList.SelectedItem.Value != "null")
         {
-            boardName = boardNameList.SelectedItem.Value;
+            boardName = boardNameList.SelectedItem.Value.ToString();
             Session["boardName"] = boardName;
             changeBoardPnl.Visible = false;
             boardPnl.Visible = true;
@@ -228,7 +228,7 @@ public partial class inspiration : System.Web.UI.Page
         }
         else
         {
-            boardLbl.Text = "Please select a board.";
+            boardErrLbl.Text = "Please select a board.";
         }
     }
 }
