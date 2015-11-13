@@ -240,6 +240,7 @@ public partial class inspiration : System.Web.UI.Page
             boardNameLbl.Text = boardName;
             changeBoardPnl.Visible = false;
             boardPnl.Visible = true;
+            switchUserPnl.Visible = false;
             loadImages(usersBoardColl, boardName);
         }
         else
