@@ -27,23 +27,28 @@ public partial class inspiration : System.Web.UI.Page
         curUser = (user)Session["curUser"];
         designUser = (user)Session["designUser"];
         userInfoColl = myDB.getUserInfoCollection();
-        if (designUser != null)
-        {
-            usersBoardColl = myDB.getUsersBoardCollection(designUser);
-        }
-        else
+        if (curUser.Account_Type == "client")
         {
             usersBoardColl = myDB.getUsersBoardCollection(curUser);
+            board_item.loadBoards(usersBoardColl, boardNameList);
         }
-        if (curUser.Account_Type == "designer")
+        else if (curUser.Account_Type == "designer")
         {
+            if (designUser != null)
+            {
+                usersBoardColl = myDB.getUsersBoardCollection(designUser);
+                userNameLbl.Text = designUser.Username;
+            }
+            else
+            {
+                usersBoardColl = myDB.getUsersBoardCollection(curUser);
+            }
             userPnl.Visible = true;
             switchUserBtn.Visible = true;
             user.loadUsers(userInfoColl, designerUserList, curUser);
         }
         boardNameLbl.Text = boardName;
         userNameLbl.Text = curUser.Username;
-        board_item.loadBoards(usersBoardColl, boardNameList);
         if (boardName != null)
         {
             loadImages(usersBoardColl, boardName);
@@ -59,7 +64,7 @@ public partial class inspiration : System.Web.UI.Page
             {
                 changeBoardPnl.Visible = true;
             }
-        }    
+        }
     }
     public void loadImages(IMongoCollection<board_item> coll, string boardName)
     {
@@ -269,6 +274,5 @@ public partial class inspiration : System.Web.UI.Page
         boardPnl.Visible = false;
         changeBoardPnl.Visible = false;
         switchUserPnl.Visible = true;
-
     }
 }
