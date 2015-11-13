@@ -151,4 +151,9 @@ public partial class ItemsPage : System.Web.UI.Page
         }
         newBoardPnl.Visible = false;
     }
+    protected void itemsGrid_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        itemsGrid.PageIndex = e.NewPageIndex;
+        itemsGrid.DataBind();
+    }
 }
