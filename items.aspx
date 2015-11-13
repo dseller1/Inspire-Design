@@ -76,7 +76,7 @@
             <asp:Button ID="newBoardBtn" runat="server" Text="Submit" OnClick="newBoardBtn_Click" CssClass="Button" />
         </asp:Panel>
     </asp:Panel>
-    <asp:GridView ID="itemsGrid" runat="server" CellPadding="5" AutoGenerateColumns="False" DataSource='<%# getItemsData() %>' GridLines="None" OnRowCommand="itemsGrid_RowCommand">
+    <asp:GridView ID="itemsGrid" runat="server" CellPadding="5" AutoGenerateColumns="False" DataSource='<%# getItemsData() %>' GridLines="None" OnRowCommand="itemsGrid_RowCommand" AllowPaging="true" PageSize="5">
         <Columns>
             <asp:TemplateField ItemStyle-CssClass="itemsGrid">
                 <ItemTemplate>
