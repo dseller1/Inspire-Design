@@ -26,7 +26,7 @@
         <asp:Button ID="switchUserBtn" runat="server" CssClass="Button" OnClick="switchUserBtn_Click" Text="Switch User" Visible="false" Width="115px" />
     </asp:Panel>
     <br />
-    <asp:GridView ID="boardItemsGrid" runat="server" DataSource='<%# getBoardData() %>' AutoGenerateColumns="False" OnRowCommand="boardItemsGrid_RowCommand">
+    <asp:GridView ID="boardItemsGrid" runat="server" RowStyle-CssClass="itemsGrid" DataSource='<%# getBoardData() %>' AutoGenerateColumns="False" OnRowCommand="boardItemsGrid_RowCommand">
         <Columns>
             <asp:BoundField HeaderText="Item ID" DataField="ItemID" />
             <asp:ImageField HeaderText="Image" DataImageUrlField="PictureURL">
