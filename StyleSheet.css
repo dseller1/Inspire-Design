@@ -194,10 +194,12 @@ nav {
     display: inline;
     padding-left: 40%;
 }
+
 #settings {
-    display: inline;
-    padding-left: 30%;
+    float: right;
+    width: 100px;
 }
+
 .Account-Label {
     width: 100px;
 }
