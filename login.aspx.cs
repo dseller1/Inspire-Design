@@ -21,6 +21,7 @@ public partial class StartPage : System.Web.UI.Page
     IMongoCollection<user> userInfoColl;
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session.Clear();
         try
         {
             // Connect to the Products databases

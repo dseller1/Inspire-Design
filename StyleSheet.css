@@ -194,10 +194,12 @@ nav {
     display: inline;
     padding-left: 40%;
 }
+
 #settings {
-    display: inline;
-    padding-left: 30%;
+    float: right;
+    width: 100px;
 }
+
 .Account-Label {
     width: 100px;
 }
@@ -211,32 +213,146 @@ nav {
     width: 100px;
 }
 
-.colorSwatch {
+.colorSwatch1 {
     height: 120px;
     width: 120px;
+    position: absolute;
+    top: 200px;
+    left: 300px;
 }
 
-.chairSwatch {
+.colorSwatch2 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 200px;
+    left: 430px;
+}
+
+.colorSwatch3 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 200px;
+    left: 560px;
+}
+
+.chairSwatch1 {
     height: 187px;
     width: 187px;
+    position: absolute;
+    top: 400px;
+    left: 300px;
 }
 
-.rugSwatch {
+.chairSwatch2 {
     height: 187px;
     width: 187px;
+    position: absolute;
+    top: 400px;
+    left: 500px;
 }
 
-.roomSwatch {
+.chairSwatch3 {
+    height: 187px;
+    width: 187px;
+    position: absolute;
+    top: 400px;
+    left: 700px;
+}
+
+.rugSwatch1 {
+    height: 187px;
+    width: 187px;
+    position: absolute;
+    top: 350px;
+    left: 1000px;
+}
+
+.rugSwatch2 {
+    height: 187px;
+    width: 187px;
+    position: absolute;
+    top: 550px;
+    left: 1100px;
+}
+
+.rugSwatch3 {
+    height: 187px;
+    width: 187px;
+    position: absolute;
+    top: 750px;
+    left: 1000px;
+}
+
+.roomSwatch1 {
     height: 144px;
     width: 144px;
+    position: absolute;
+    top: 200px;
+    left: 1450px;
 }
 
-.patternSwatch {
+.roomSwatch2 {
+    height: 144px;
+    width: 144px;
+    position: absolute;
+    top: 350px;
+    left: 1400px;
+}
+
+.roomSwatch3 {
+    height: 144px;
+    width: 144px;
+    position: absolute;
+    top: 500px;
+    left: 1450px;
+}
+
+.patternSwatch1 {
     height: 166px;
     width: 166px;
+    position: absolute;
+    top: 150px;
+    left: 800px;
 }
 
-.ottomanSwatch {
+.patternSwatch2 {
+    height: 166px;
+    width: 166px;
+    position: absolute;
+    top: 150px;
+    left: 980px;
+}
+
+.patternSwatch3 {
+    height: 166px;
+    width: 166px;    
+    position: absolute;
+    top: 150px;
+    left: 1160px;
+}
+
+.ottomanSwatch1 {
     height: 187px;
     width: 187px;
+    position: absolute;
+    top: 600px;
+    left: 400px;
+}
+
+.ottomanSwatch2 {
+    height: 187px;
+    width: 187px;
+    position: absolute;
+    top: 600px;
+    left: 600px;
+}
+
+.ottomanSwatch3 {
+    height: 187px;
+    width: 187px;
+    position: absolute;
+    top: 600px;
+    left: 800px;
 }

@@ -18,12 +18,12 @@
     <asp:RequiredFieldValidator ID="cnfrmPassFieldValidator" runat="server" ControlToValidate="cnfrmPassTxt" ErrorMessage="Password is required." CssClass="Validator" />
     <br />
     <br />
-    <asp:Label ID="emailLbl" runat="server" Text="Enter E-mail Address: " Width="160px" />
+    <asp:Label ID="emailLbl" runat="server" Text="E-mail Address: " Width="160px" />
     <asp:TextBox ID="emailTxt" runat="server" TextMode="Email" CssClass="TextBox"></asp:TextBox>
     <asp:RequiredFieldValidator ID="emailFieldValidator" runat="server" ControlToValidate="emailTxt" ErrorMessage="Email address is required." CssClass="Validator" />
     <br />
     <br />
-    <asp:Label ID="phoneLbl" runat="server" Text="Enter Phone #: " Width="160px" />
+    <asp:Label ID="phoneLbl" runat="server" Text="Phone #: " Width="160px" />
     <asp:TextBox ID="phoneTxt" runat="server" CssClass="TextBox"></asp:TextBox>
     <br />
     <br />

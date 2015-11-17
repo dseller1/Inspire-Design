@@ -52,6 +52,7 @@ public partial class inspiration : System.Web.UI.Page
         if (boardName != null)
         {
             loadImages(usersBoardColl, boardName);
+            inspirationPnl.Visible = true;
         }
         else
         {
@@ -88,11 +89,13 @@ public partial class inspiration : System.Web.UI.Page
             {
                 colorPlace1.ImageUrl = color.Image_Link;
                 i++;
+                colorPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 2)
             {
                 colorPlace2.ImageUrl = color.Image_Link;
                 i++;
+                colorPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 3)
             {
@@ -113,11 +116,13 @@ public partial class inspiration : System.Web.UI.Page
             {
                 chairPlace1.ImageUrl = chair.Image_Link;
                 i++;
+                chairPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 2)
             {
                 chairPlace2.ImageUrl = chair.Image_Link;
                 i++;
+                chairPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 3)
             {
@@ -125,6 +130,35 @@ public partial class inspiration : System.Web.UI.Page
             }
         }
     }
+
+    public void loadOttomans(IMongoCollection<board_item> coll, string boardName)
+    {
+        List<board_item> ottomans = coll.Find(brd => brd.Type == "Ottoman" && brd.Board_Name == boardName)
+            .ToListAsync()
+            .Result;
+
+        int i = 1;
+        foreach (board_item otm in ottomans)
+        {
+            if (i == 1)
+            {
+                ottomanPlace1.ImageUrl = otm.Image_Link;
+                i++;
+                ottomanPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+            }
+            else if (i == 2)
+            {
+                ottomanPlace2.ImageUrl = otm.Image_Link;
+                i++;
+                ottomanPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+            }
+            else if (i == 3)
+            {
+                ottomanPlace3.ImageUrl = otm.Image_Link;
+            }
+        }
+    }
+
     public void loadRugs(IMongoCollection<board_item> coll, string boardName)
     {
         List<board_item> rugs = coll.Find(brd => brd.Type == "Rugs" && brd.Board_Name == boardName)
@@ -138,11 +172,13 @@ public partial class inspiration : System.Web.UI.Page
             {
                 rugPlace1.ImageUrl = rug.Image_Link;
                 i++;
+                rugPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 2)
             {
                 rugPlace2.ImageUrl = rug.Image_Link;
                 i++;
+                rugPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 3)
             {
@@ -163,11 +199,13 @@ public partial class inspiration : System.Web.UI.Page
             {
                 patternPlace1.ImageUrl = pattern.Image_Link;
                 i++;
+                patternPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 2)
             {
                 patternPlace2.ImageUrl = pattern.Image_Link;
                 i++;
+                patternPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 3)
             {
@@ -188,11 +226,13 @@ public partial class inspiration : System.Web.UI.Page
             {
                 roomPlace1.ImageUrl = room.Image_Link;
                 i++;
+                roomPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 2)
             {
                 roomPlace2.ImageUrl = room.Image_Link;
                 i++;
+                roomPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
             }
             else if (i == 3)
             {
@@ -200,35 +240,35 @@ public partial class inspiration : System.Web.UI.Page
             }
         }
     }
-    public void loadOttomans(IMongoCollection<board_item> coll, string boardName)
+
+    public void resetBoard()
     {
-        List<board_item> ottomans = coll.Find(brd => brd.Type == "Ottoman" && brd.Board_Name == boardName)
-            .ToListAsync()
-            .Result;
-
-        int i = 1;
-        foreach (board_item otm in ottomans)
-        {
-            if (i == 1)
-            {
-                ottomanPlace1.ImageUrl = otm.Image_Link;
-                i++;
-            }
-            else if (i == 2)
-            {
-                ottomanPlace2.ImageUrl = otm.Image_Link;
-                i++;
-            }
-            else if (i == 3)
-            {
-                ottomanPlace3.ImageUrl = otm.Image_Link;
-            }
-        }
+        colorPlace1.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        colorPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        colorPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        chairPlace1.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        chairPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        chairPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        rugPlace1.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        rugPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        rugPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        patternPlace1.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        patternPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        patternPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        roomPlace1.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        roomPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        roomPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        ottomanPlace1.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        ottomanPlace2.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
+        ottomanPlace3.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png";
     }
-
     protected void changeBoardBtn_Click(object sender, EventArgs e)
     {
+        resetBoard();
+        boardName = null;
+        Session["boardName"] = boardName;
         boardPnl.Visible = false;
+        inspirationPnl.Visible = false;
         changeBoardPnl.Visible = true;
     }
     protected void boardSbmtBtn_Click(object sender, EventArgs e)
@@ -240,6 +280,7 @@ public partial class inspiration : System.Web.UI.Page
             boardNameLbl.Text = boardName;
             changeBoardPnl.Visible = false;
             boardPnl.Visible = true;
+            inspirationPnl.Visible = true;
             switchUserPnl.Visible = false;
             loadImages(usersBoardColl, boardName);
         }
@@ -261,13 +302,15 @@ public partial class inspiration : System.Web.UI.Page
         }
         else
         {
-            userLbl.Text = "Please select a user.";
+            userErrLbl.Text = "Please select a user.";
         }
     }
     protected void switchUserBtn_Click(object sender, EventArgs e)
     {
         userErrLbl.Text = "";
         designerUserList.ClearSelection();
+        designUser = null;
+        Session["designUser"] = designUser;
         ListItem def = boardNameList.Items[0];
         boardNameList.Items.Clear();
         boardNameList.Items.Add(def);

@@ -18,22 +18,69 @@ public partial class ItemsPage : System.Web.UI.Page
     List<product_image> images;
     IMongoCollection<product_image> imgColl;
     IMongoCollection<board_item> usersBoardColl;
+    IMongoCollection<user> userInfoColl;
     product_image p = new product_image();
     database myDB;
     user curUser;
+    user designUser;
     string boardName;
     elements el = new elements();
     protected void Page_Load(object sender, EventArgs e)
     {
         myDB = (database)Session["myDB"];
-        curUser = (user)Session["curUser"];
         boardName = (string)Session["boardName"];
+        curUser = (user)Session["curUser"];
+        designUser = (user)Session["designUser"];
+        userInfoColl = myDB.getUserInfoCollection();
         images = (List<product_image>)Session["allItems"];
         imgColl = myDB.getImagesCollection();
-        usersBoardColl = myDB.getUsersBoardCollection(curUser);
-        board_item.loadBoards(usersBoardColl, boardNameList);
         elements.loadElements(imgColl, colorList, lineList, lightList, formList, spaceList, textureList, patternList, massList, balanceList, unityList, harmonyList, rhythmList, proportionList, varietyList, emphasisList, scaleList, typeList);
-        boardNameLbl.Text = "Selected Board: " + boardName;
+
+        if (curUser.Account_Type == "client")
+        {
+            usersBoardColl = myDB.getUsersBoardCollection(curUser);
+            userNameLbl.Text = curUser.Username;
+            board_item.loadBoards(usersBoardColl, boardNameList);
+        }
+        else if (curUser.Account_Type == "designer")
+        {
+            if (designUser != null)
+            {
+                usersBoardColl = myDB.getUsersBoardCollection(designUser);
+                userNameLbl.Text = designUser.Username;
+            }
+            else
+            {
+                userNameLbl.Text = curUser.Username;
+                usersBoardColl = myDB.getUsersBoardCollection(curUser);
+            }
+            switchUserBtn.Visible = true;
+            user.loadUsers(userInfoColl, designerUserList, curUser);
+        }
+        boardNameLbl.Text = boardName;
+
+        if (boardName != null)
+        {
+            optionsPnl.Visible = true;
+            boardNamePnl.Visible = true;
+            if (curUser.Account_Type == "designer")
+            {
+                userNamePnl.Visible = true;
+            }
+        }
+        else
+        {
+            boardNamePnl.Visible = false;
+            userNamePnl.Visible = false;
+            if (curUser.Account_Type == "designer")
+            {
+                switchUserPnl.Visible = true;
+            }
+            else
+            {
+                changeBoardPnl.Visible = true;
+            }
+        }
     }
     public DataTable getItemsData()
     {
@@ -120,18 +167,33 @@ public partial class ItemsPage : System.Web.UI.Page
     }
     protected void chooseBrdBtn_Click(object sender, EventArgs e)
     {
-        boardPnl.Visible = false;
-        optionsPnl.Visible = true;
-        itemsGrid.Visible = true;
-        boardName = boardNameList.SelectedItem.Value;
-        Session["boardName"] = boardName;
-        Response.Redirect(Request.RawUrl);
+        if (boardNameList.SelectedItem.Value != "null")
+        {
+            changeBoardPnl.Visible = false;
+            optionsPnl.Visible = true;
+            itemsGrid.Visible = true;
+            boardName = boardNameList.SelectedItem.Value;
+            boardNamePnl.Visible = true;
+            Session["boardName"] = boardName;
+            Response.Redirect(Request.RawUrl);
+        }
+        else
+        {
+            boardErrLbl.Text = "Please select a board.";
+        }
     }
     protected void changeBoardBtn_Click(object sender, EventArgs e)
     {
-        boardPnl.Visible = true;
+        if (curUser.Account_Type == "designer")
+        {
+            board_item.loadBoards(usersBoardColl, boardNameList);
+        }
+        boardName = null;
+        Session["boardName"] = boardName;
+        changeBoardPnl.Visible = true;
         itemsGrid.Visible = false;
         optionsPnl.Visible = false;
+        boardNamePnl.Visible = false;
     }
 
     protected void createBoardBtn_Click(object sender, EventArgs e)
@@ -143,11 +205,11 @@ public partial class ItemsPage : System.Web.UI.Page
         if (!boardNameList.Items.Contains(new ListItem(newBoardTxt.Text)))
         {
             boardNameList.Items.Add(new ListItem(newBoardTxt.Text));
-            boardLbl.Text = "Board created successfully.";
+            boardErrLbl.Text = "Board created successfully.";
         }
         else
         {
-            boardLbl.Text = "Board already exists.";
+            boardErrLbl.Text = "Board already exists.";
         }
         newBoardPnl.Visible = false;
     }
@@ -155,5 +217,36 @@ public partial class ItemsPage : System.Web.UI.Page
     {
         itemsGrid.PageIndex = e.NewPageIndex;
         itemsGrid.DataBind();
+    }
+    protected void selectUsrBtn_Click(object sender, EventArgs e)
+    {
+        if (designerUserList.SelectedItem.Value != "null")
+        {
+            designUser = user.findUser(userInfoColl, designerUserList.SelectedItem.Text);
+            Session["designUser"] = designUser;
+            userNameLbl.Text = designUser.Username;
+            usersBoardColl = myDB.getUsersBoardCollection(designUser);
+            board_item.loadBoards(usersBoardColl, boardNameList);
+            changeBoardPnl.Visible = true;
+            switchUserPnl.Visible = false;
+            userNamePnl.Visible = true;
+            boardNamePnl.Visible = false;
+            optionsPnl.Visible = false;
+        }
+        else
+        {
+            userErrLbl.Text = "Please select a user.";
+        }
+    }
+    protected void switchUserBtn_Click(object sender, EventArgs e)
+    {
+        boardName = null;
+        Session["boardName"] = boardName;
+        designUser = null;
+        Session["designUser"] = designUser;
+        boardNamePnl.Visible = false;
+        userNamePnl.Visible = false;
+        optionsPnl.Visible = false;
+        switchUserPnl.Visible = true;
     }
 }

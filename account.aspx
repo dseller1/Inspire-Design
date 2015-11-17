@@ -15,8 +15,8 @@
     <asp:Panel ID="cnfrmPassPnl" runat="server" Visible="false">
         <asp:Label ID="cnfrmPass" runat="server" Text="Confirm Password: " Width="140px" />
         <asp:TextBox ID="cnfrmPassTxt" TextMode="Password" runat="server" />
-        <asp:ImageButton ID="changePassYesBtn" runat="server" OnClick="changePassYesBtn_Click" Width="24px" Height="24px" ImageUrl="~/Images/greenmark.png" />
-        <asp:ImageButton ID="changePassNoBtn" runat="server" OnClick="changePassNoBtn_Click" CausesValidation="false" Width="24px" Height="24px" ImageUrl="~/Images/redX.png" />
+        <asp:ImageButton ID="changePassYesBtn" runat="server" OnClick="changePassYesBtn_Click" Width="20px" Height="20px" ImageUrl="~/Images/greenmark.png" />
+        <asp:ImageButton ID="changePassNoBtn" runat="server" OnClick="changePassNoBtn_Click" CausesValidation="false" Width="20px" Height="20px" ImageUrl="~/Images/redX.png" />
         <asp:RequiredFieldValidator ID="cnfrmPassFieldValidator" runat="server" ErrorMessage="Password is required." CssClass="Validator" />
         <asp:Label ID="passErrorLbl" runat="server" CssClass="Label"/>
     </asp:Panel>
