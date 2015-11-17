@@ -56,6 +56,7 @@ public partial class inspiration : System.Web.UI.Page
         }
         else
         {
+            inspirationPnl.Visible = false;
             boardPnl.Visible = false;
             if (curUser.Account_Type == "designer")
             {
