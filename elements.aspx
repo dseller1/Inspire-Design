@@ -17,6 +17,9 @@
         
         <asp:Panel ID="newBoardPnl" runat="server" Visible="false" Width="413px" HorizontalAlign="Right">
             <asp:TextBox ID="newBoardTxt" runat="server" Width="80px" CssClass="TextBox" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="newBoardBtn" runat="server" Text="Submit" OnClick="newBoardBtn_Click" CssClass="Button" />
+            &nbsp;&nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="newBoardFieldValidator" runat="server" ControlToValidate="newBoardTxt" ErrorMessage="Board name is required." CssClass="Validator" />
         </asp:Panel>
     </asp:Panel>
