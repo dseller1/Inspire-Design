@@ -9,38 +9,38 @@
     </asp:Panel>
     <asp:Panel ID="boardNamePnl" runat="server" Visible="false">
         <asp:Label ID="boardLbl" runat="server" Text="Selected Board: " />
-        <asp:Label ID="boardNameLbl" runat="server"></asp:Label>
+        <asp:Label ID="boardNameLbl" runat="server" />
     </asp:Panel>
     <asp:Panel ID="changeBoardPnl" runat="server" Visible="false">
         <asp:DropDownList ID="boardNameList" runat="server" CssClass="DropDownList">
-            <asp:ListItem Text="Select Board.." Value="null"></asp:ListItem>
+            <asp:ListItem Text="Select Board.." Value="null" />
         </asp:DropDownList>
         <asp:Button ID="chooseBrdBtn" runat="server" Text="Select Board" OnClick="chooseBrdBtn_Click" CssClass="Button" Width="115px" />
         <asp:Button ID="createBoardBtn" runat="server" Text="Create Board" OnClick="createBoardBtn_Click" CssClass="Button" Width="115px" />
-        <asp:Label ID="boardErrLbl" runat="server" CssClass="Label"></asp:Label>
+        <asp:Label ID="boardErrLbl" runat="server" CssClass="Label" />
         <asp:Panel ID="newBoardPnl" runat="server" Visible="false" Width="413px" HorizontalAlign="Right">
-            <asp:TextBox ID="newBoardTxt" runat="server" Width="80px" CssClass="TextBox"></asp:TextBox>
-            <asp:Button ID="newBoardBtn" runat="server" Text="Submit" OnClick="newBoardBtn_Click" CssClass="Button" />
+            <asp:TextBox ID="newBoardTxt" runat="server" Width="80px" CssClass="TextBox" />
+            <asp:RequiredFieldValidator ID="newBoardFieldValidator" runat="server" ControlToValidate="newBoardTxt" ErrorMessage="Board name is required." CssClass="Validator" />
         </asp:Panel>
     </asp:Panel>
     <asp:Panel ID="switchUserPnl" runat="server" Visible="false">
         <asp:DropDownList ID="designerUserList" runat="server" CssClass="DropDownList">
-            <asp:ListItem Text="Select User.." Value="null"></asp:ListItem>
+            <asp:ListItem Text="Select User.." Value="null" />
         </asp:DropDownList>
         &nbsp;&nbsp;
            
         <asp:Button ID="selectUsrBtn" runat="server" Text="Select User" OnClick="selectUsrBtn_Click" CssClass="Button" Width="110px" />
-        <asp:Label ID="userErrLbl" runat="server" CssClass="Label"></asp:Label>
+        <asp:Label ID="userErrLbl" runat="server" CssClass="Label" />
     </asp:Panel>
     <asp:Panel ID="optionsPnl" runat="server" Visible="false">
         <asp:DropDownList ID="colorList" runat="server" CssClass="DropDownList">
-            <asp:ListItem Text="Select Color.." Value="null"></asp:ListItem>
+            <asp:ListItem Text="Select Color.." Value="null" />
         </asp:DropDownList>
         <asp:DropDownList ID="lineList" runat="server" CssClass="DropDownList">
-            <asp:ListItem Text="Select Line Structure.." Value="null"></asp:ListItem>
+            <asp:ListItem Text="Select Line Structure.." Value="null" />
         </asp:DropDownList>
         <asp:DropDownList ID="lightList" runat="server" CssClass="DropDownList">
-            <asp:ListItem Text="Select Light.." Value="null"></asp:ListItem>
+            <asp:ListItem Text="Select Light.." Value="null" />
         </asp:DropDownList>
         <asp:DropDownList ID="formList" runat="server" CssClass="DropDownList">
             <asp:ListItem Text="Select Form.." Value="null"></asp:ListItem>

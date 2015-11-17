@@ -58,27 +58,29 @@ public partial class ItemsPage : System.Web.UI.Page
             user.loadUsers(userInfoColl, designerUserList, curUser);
         }
         boardNameLbl.Text = boardName;
-
-        if (boardName != null)
+        if (!Page.IsPostBack)
         {
-            optionsPnl.Visible = true;
-            boardNamePnl.Visible = true;
-            if (curUser.Account_Type == "designer")
+            if (boardName != null)
             {
-                userNamePnl.Visible = true;
-            }
-        }
-        else
-        {
-            boardNamePnl.Visible = false;
-            userNamePnl.Visible = false;
-            if (curUser.Account_Type == "designer")
-            {
-                switchUserPnl.Visible = true;
+                optionsPnl.Visible = true;
+                boardNamePnl.Visible = true;
+                if (curUser.Account_Type == "designer")
+                {
+                    userNamePnl.Visible = true;
+                }
             }
             else
             {
-                changeBoardPnl.Visible = true;
+                boardNamePnl.Visible = false;
+                userNamePnl.Visible = false;
+                if (curUser.Account_Type == "designer")
+                {
+                    switchUserPnl.Visible = true;
+                }
+                else
+                {
+                    changeBoardPnl.Visible = true;
+                }
             }
         }
     }
@@ -202,14 +204,17 @@ public partial class ItemsPage : System.Web.UI.Page
     }
     protected void newBoardBtn_Click(object sender, EventArgs e)
     {
-        if (!boardNameList.Items.Contains(new ListItem(newBoardTxt.Text)))
+        if (newBoardTxt.Text != null)
         {
-            boardNameList.Items.Add(new ListItem(newBoardTxt.Text));
-            boardErrLbl.Text = "Board created successfully.";
-        }
-        else
-        {
-            boardErrLbl.Text = "Board already exists.";
+            if (!boardNameList.Items.Contains(new ListItem(newBoardTxt.Text)))
+            {
+                boardNameList.Items.Add(new ListItem(newBoardTxt.Text));
+                boardErrLbl.Text = "Board created successfully.";
+            }
+            else
+            {
+                boardErrLbl.Text = "Board already exists.";
+            }
         }
         newBoardPnl.Visible = false;
     }

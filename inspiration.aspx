@@ -3,16 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:Panel ID="boardPnl" runat="server" Visible="true" Height="830px">
-        <asp:Panel ID="userPnl" runat="server" Visible="false">
-            <asp:Label ID="userLbl" runat="server" Text="Selected User: " />
-            <asp:Label ID="userNameLbl" runat="server" />
-        </asp:Panel>
+    <asp:Panel ID="userNamePnl" runat="server" Visible="false">
+        <asp:Label ID="userLbl" runat="server" Text="Selected User: " />
+        <asp:Label ID="userNameLbl" runat="server" />
+    </asp:Panel>
+    <asp:Panel ID="boardNamePnl" runat="server" Visible="false">
         <asp:Label ID="boardLbl" runat="server" Text="Selected Board: " />
         <asp:Label ID="boardNameLbl" runat="server"></asp:Label><br />
-        <asp:Button ID="changeBoardBtn" runat="server" Text="Change Board" CssClass="Button" Height="35px" Width="123px" OnClick="changeBoardBtn_Click" />
     </asp:Panel>
-    <asp:Panel ID="changeBoardPnl" runat="server" Visible="false" Height="830px">
+    <asp:Button ID="changeBoardBtn" runat="server" Text="Change Board" CssClass="Button" Height="35px" Width="123px" OnClick="changeBoardBtn_Click" />
+    <asp:Panel ID="changeBoardPnl" runat="server" Visible="false">
         <asp:DropDownList ID="boardNameList" runat="server" CssClass="DropDownList">
             <asp:ListItem Text="Select Board.." Value="null"></asp:ListItem>
         </asp:DropDownList>
@@ -20,7 +20,7 @@
         <asp:Button ID="switchUserBtn" runat="server" CssClass="Button" OnClick="switchUserBtn_Click" Text="Switch User" Width="107px" Visible="false" />
         <asp:Label ID="boardErrLbl" runat="server" CssClass="Label"></asp:Label>
     </asp:Panel>
-    <asp:Panel ID="switchUserPnl" runat="server" Visible="false" Height="830px">
+    <asp:Panel ID="switchUserPnl" runat="server" Visible="false">
         <asp:DropDownList ID="designerUserList" runat="server" CssClass="DropDownList">
             <asp:ListItem Text="Select User.." Value="null"></asp:ListItem>
         </asp:DropDownList>
@@ -29,7 +29,7 @@
         <asp:Button ID="selectUsrBtn" runat="server" Text="Select User" OnClick="selectUsrBtn_Click" CssClass="Button" Width="110px" />
         <asp:Label ID="userErrLbl" runat="server" CssClass="Label"></asp:Label>
     </asp:Panel>
-    <asp:Panel ID="inspirationPnl" runat="server">
+    <asp:Panel ID="inspirationPnl" runat="server" Height="830px">
         <asp:Image ID="colorPlace1" runat="server" CssClass="colorSwatch1" />
         <asp:Image ID="colorPlace2" runat="server" CssClass="colorSwatch2" />
         <asp:Image ID="colorPlace3" runat="server" CssClass="colorSwatch3" />
@@ -49,7 +49,5 @@
         <asp:Image ID="rugPlace2" runat="server" CssClass="rugSwatch2" />
         <asp:Image ID="rugPlace3" runat="server" CssClass="rugSwatch3" />
     </asp:Panel>
-
-
 </asp:Content>
 
