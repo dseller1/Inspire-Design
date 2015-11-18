@@ -33,11 +33,14 @@ public partial class inspiration : System.Web.UI.Page
         boardErrLbl.Text = "";
         if (curUser.Account_Type == "client")
         {
+            userNamePnl.Visible = false;
             usersBoardColl = myDB.getUsersBoardCollection(curUser);
             board_item.loadBoards(usersBoardColl, boardNameList);
         }
         else if (curUser.Account_Type == "designer")
         {
+            userNamePnl.Visible = true;
+            switchUserBtn.Visible = true;
             if (designUser != null)
             {
                 usersBoardColl = myDB.getUsersBoardCollection(designUser);
@@ -52,9 +55,8 @@ public partial class inspiration : System.Web.UI.Page
         if (!Page.IsPostBack)
         {
 
-            userNamePnl.Visible = true;
             boardNamePnl.Visible = true;
-            switchUserBtn.Visible = true;
+            resetBoard();
             if (boardName != null)
             {
                 loadImages(usersBoardColl, boardName);
@@ -277,8 +279,14 @@ public partial class inspiration : System.Web.UI.Page
         resetBoard();
         boardName = null;
         Session["boardName"] = boardName;
+        if (curUser.Account_Type == "designer")
+        {
+            usersBoardColl = myDB.getUsersBoardCollection(designUser);
+            board_item.loadBoards(usersBoardColl, boardNameList);
+            userNamePnl.Visible = true;
+        }
+        boardNameList.ClearSelection();
         boardNamePnl.Visible = false;
-        userNamePnl.Visible = true;
         changeBoardBtn.Visible = false;
         inspirationPnl.Visible = false;
         changeBoardPnl.Visible = true;
@@ -290,10 +298,13 @@ public partial class inspiration : System.Web.UI.Page
             boardName = boardNameList.SelectedItem.Value;
             Session["boardName"] = boardName;
             boardNameLbl.Text = boardName;
+            if (curUser.Account_Type == "designer")
+            {
+                userNamePnl.Visible = true;
+            }
             changeBoardPnl.Visible = false;
             changeBoardBtn.Visible = true;
             inspirationPnl.Visible = true;
-            userNamePnl.Visible = true;
             boardNamePnl.Visible = true;
             changeBoardBtn.Visible = true;
             switchUserPnl.Visible = false;

@@ -101,8 +101,8 @@ nav {
 
         nav ul a:link {
             color: #000033;
-    width: 91px;
-}
+            width: 91px;
+        }
 
         nav ul a:hover {
             background-color: #024864;
@@ -184,22 +184,18 @@ nav {
     font-family: Helvetica, Arial, Sans-Serif;
     font-weight: bold;
 }
+
 .loginButtons {
     padding-left: 20px;
 }
+
 #title {
     text-align: center;
 }
+
 #heading {
-    display: inline;
-    padding-left: 40%;
+    text-align: center;
 }
-
-#settings {
-    float: right;
-    width: 100px;
-}
-
 .Account-Label {
     width: 100px;
 }
@@ -327,7 +323,7 @@ nav {
 
 .patternSwatch3 {
     height: 166px;
-    width: 166px;    
+    width: 166px;
     position: absolute;
     top: 150px;
     left: 1160px;
