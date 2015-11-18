@@ -13,7 +13,8 @@
     <form id="form1" runat="server">
         <div id="wrapper">
             <header>
-                <h1 id="heading">Inspire+Design</h1>
+                <h1 style="text-align: center;">Inspire+Design
+                </h1>
             </header>
             <nav>
             </nav>

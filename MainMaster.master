@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
         <div id="wrapper">
             <header>
-                <h1 id="heading">Inspire+Design
+                <h1 id="heading" style="padding-left: 120px;">Inspire+Design
                     <span style="float: right; width: 120px;">
                         <asp:ImageButton runat="server" ID="settingsBtn" OnClick="settingsBtn_Click" ImageUrl="~/Images/settings.png" CausesValidation="false" Style="position: relative; top: 7px;" Height="26px" Width="26px" />
                         <asp:Button runat="server" ID="logoutBtn" OnClick="logoutBtn_Click" CausesValidation="false" Text="Logout" />
