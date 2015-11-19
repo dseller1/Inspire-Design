@@ -3,11 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:Panel ID="userPnl" runat="server">
+    <asp:Panel ID="userPnl" runat="server" CssClass="accountPnl">
         <asp:Label ID="username" runat="server" Text="Username: " Width="140px" />
         <asp:Label ID="usernameLbl" runat="server" Width="170px" />
     </asp:Panel>
-    <asp:Panel ID="passwordPnl" runat="server">
+    <asp:Panel ID="passwordPnl" runat="server" CssClass="accountPnl">
         <asp:Label ID="pass" runat="server" Text="Password: " Width="140px" />
         <asp:Label ID="passwordLbl" runat="server" Text="••••••••" Width="170px" />
         <asp:TextBox ID="passwordTxt" TextMode="Password" runat="server" Visible="false" />
@@ -15,7 +15,7 @@
         <asp:Label runat="server" Width="68px" />
         <asp:RequiredFieldValidator ID="passwordFieldValidator" runat="server" ErrorMessage="Password is required." CssClass="Validator" />
     </asp:Panel>
-    <asp:Panel ID="cnfrmPassPnl" runat="server" Visible="false">
+    <asp:Panel ID="cnfrmPassPnl" runat="server" Visible="false" CssClass="accountPnl">
         <asp:Label ID="cnfrmPass" runat="server" Text="Confirm Password: " Width="140px" />
         <asp:TextBox ID="cnfrmPassTxt" TextMode="Password" runat="server" />
         <asp:ImageButton ID="changePassYesBtn" runat="server" OnClick="changePassYesBtn_Click" style="position: relative; top: 4px;" Width="19px" Height="19px" ImageUrl="~/Images/greenmark.png" />
@@ -23,7 +23,7 @@
         <asp:RequiredFieldValidator ID="cnfrmPassFieldValidator" runat="server" ErrorMessage="Password is required." CssClass="Validator" />
         <asp:Label ID="passErrorLbl" runat="server" CssClass="Label" />
     </asp:Panel>
-    <asp:Panel ID="emailPnl" runat="server">
+    <asp:Panel ID="emailPnl" runat="server" CssClass="accountPnl">
         <asp:Label ID="email" runat="server" Text="E-mail: " Width="140px" Height="22px" />
         <asp:Label ID="emailAddressLbl" runat="server" Width="170px" Height="22px" />
         <asp:TextBox ID="emailAddressTxt" TextMode="Email" runat="server" Visible="false" />
@@ -32,7 +32,7 @@
         <asp:ImageButton ID="changeEmailNoBtn" runat="server" OnClick="changeEmailNoBtn_Click" Visible="false" style="position: relative; top: 4px;" CausesValidation="false" Width="19px" Height="19px" ImageUrl="~/Images/redX.png" />
         <asp:RequiredFieldValidator ID="changeEmailFieldValidator" runat="server" ErrorMessage="Email address is required." CssClass="Validator" />
     </asp:Panel>
-    <asp:Panel ID="phonePnl" runat="server">
+    <asp:Panel ID="phonePnl" runat="server" CssClass="accountPnl">
         <asp:Label ID="phone" runat="server" Text="Phone #: " Width="140px" />
         <asp:Label ID="phoneLbl" runat="server" Width="170px" />
         <asp:TextBox ID="phoneTxt" runat="server" Visible="false" />
@@ -40,11 +40,11 @@
         <asp:ImageButton ID="changePhoneYesBtn" runat="server" OnClick="changePhoneYesBtn_Click" CausesValidation="false" Visible="false" style="position: relative; top: 4px;" Width="19px" Height="19px" ImageUrl="~/Images/greenmark.png" />
         <asp:ImageButton ID="changePhoneNoBtn" runat="server" OnClick="changePhoneNoBtn_Click" CausesValidation="false" Visible="false" style="position: relative; top: 4px;" Width="19px" Height="19px" ImageUrl="~/Images/redX.png" />
     </asp:Panel>
-    <asp:Panel ID="clientPnl" runat="server" Visible="false">
+    <asp:Panel ID="clientPnl" runat="server" Visible="false" CssClass="accountPnl">
         <asp:Label ID="designer" runat="server" Text="Designer: " Width="140px" />
         <asp:Label ID="designerLbl" runat="server" Width="170px" />
     </asp:Panel>
-    <asp:Panel ID="designerPnl" runat="server" Visible="false">
+    <asp:Panel ID="designerPnl" runat="server" Visible="false" CssClass="accountPnl">
         <asp:Label ID="clientLbl" runat="server" Text="Clients: " Width="140px" />
         <asp:ListBox ID="clientList" runat="server" CssClass="ListBox" />
         <asp:Button ID="addClientBtn" runat="server" OnClick="addClientBtn_Click" CausesValidation="false" Text="Add Client" CssClass="Button" Width="94px" />

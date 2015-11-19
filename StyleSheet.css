@@ -1,4 +1,5 @@
-﻿body {
+﻿/* Computer Styles */
+body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: lightgray;
 }
@@ -51,16 +52,32 @@
 }
 
 header {
-    background-color: #024864;
+    background: #024864;
     color: #FFFFFF;
+    display: flex;
     height: 60px;
     padding-top: 20px;
 }
 
 h1 {
+    flex: 1;
+    text-align: center;
     margin-bottom: 0;
     margin-top: 0;
+    line-height: 40px;
     font-family: 'Helvetica Neue', sans-serif;
+}
+
+.accountBtn {
+    width: 97px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 40px;
+    padding-right: 3.5%;
+}
+.leftpad {
+    width:97px;
+    padding-left: 3.5%;
 }
 
 h2 {
@@ -85,34 +102,28 @@ nav {
 
     nav a {
         text-decoration: none;
+        display: block;
         height: 40px;
         padding: 10px 25px;
-        display: block;
     }
 
     nav ul {
         margin: 0px;
         padding-left: 0px;
         width: 100%;
-        display: block;
         list-style-type: none;
         line-height: 40px;
     }
 
-        nav ul a:link {
-            color: #000033;
-            width: 91px;
-        }
-
-        nav ul a:hover {
-            background-color: #024864;
-            color: #FFFFFF;
-            width: 90%;
-        }
-
-        nav ul a:visited {
+        nav ul li a {
             color: #000033;
         }
+
+            nav ul li a:hover {
+                background-color: #024864;
+                color: #FFFFFF;
+                width: 90%;
+            }
 
 #main {
     padding: 10px 30px 30px 10px;
@@ -189,13 +200,10 @@ nav {
     padding-left: 20px;
 }
 
-#title {
-    text-align: center;
+.mainHeading {
+    display: inline;
 }
 
-#heading {
-    text-align: center;
-}
 .Account-Label {
     width: 100px;
 }
@@ -209,146 +217,174 @@ nav {
     width: 100px;
 }
 
-.colorSwatch1 {
+.colorSwatch1, .colorSwatch2, .colorSwatch3 {
     height: 120px;
     width: 120px;
     position: absolute;
+}
+
+.colorSwatch1 {
     top: 200px;
     left: 300px;
 }
 
 .colorSwatch2 {
-    height: 120px;
-    width: 120px;
-    position: absolute;
     top: 200px;
     left: 430px;
 }
 
 .colorSwatch3 {
-    height: 120px;
-    width: 120px;
-    position: absolute;
     top: 200px;
     left: 560px;
 }
 
-.chairSwatch1 {
+.chairSwatch1, .chairSwatch2, .chairSwatch3 {
     height: 187px;
     width: 187px;
     position: absolute;
+}
+
+.chairSwatch1 {
     top: 400px;
     left: 300px;
 }
 
 .chairSwatch2 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
     top: 400px;
     left: 500px;
 }
 
 .chairSwatch3 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
     top: 400px;
     left: 700px;
 }
 
-.rugSwatch1 {
+.rugSwatch1, .rugSwatch2, .rugSwatch3 {
     height: 187px;
     width: 187px;
     position: absolute;
+}
+
+.rugSwatch1 {
     top: 350px;
     left: 1000px;
 }
 
 .rugSwatch2 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
     top: 550px;
     left: 1100px;
 }
 
 .rugSwatch3 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
     top: 750px;
     left: 1000px;
 }
 
-.roomSwatch1 {
+.roomSwatch1, .roomSwatch2, .roomSwatch3 {
     height: 144px;
     width: 144px;
     position: absolute;
+}
+
+.roomSwatch1 {
     top: 200px;
     left: 1450px;
 }
 
 .roomSwatch2 {
-    height: 144px;
-    width: 144px;
-    position: absolute;
     top: 350px;
     left: 1400px;
 }
 
 .roomSwatch3 {
-    height: 144px;
-    width: 144px;
-    position: absolute;
     top: 500px;
     left: 1450px;
 }
 
-.patternSwatch1 {
+.patternSwatch1, .patternSwatch2, .patternSwatch3 {
     height: 166px;
     width: 166px;
     position: absolute;
+}
+
+.patternSwatch1 {
     top: 150px;
     left: 800px;
 }
 
 .patternSwatch2 {
-    height: 166px;
-    width: 166px;
-    position: absolute;
     top: 150px;
     left: 980px;
 }
 
 .patternSwatch3 {
-    height: 166px;
-    width: 166px;
-    position: absolute;
     top: 150px;
     left: 1160px;
 }
 
-.ottomanSwatch1 {
+.ottomanSwatch1, .ottomanSwatch2, .ottomanSwatch3 {
     height: 187px;
     width: 187px;
     position: absolute;
+}
+
+.ottomanSwatch1 {
     top: 600px;
     left: 400px;
 }
 
 .ottomanSwatch2 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
     top: 600px;
     left: 600px;
 }
 
 .ottomanSwatch3 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
     top: 600px;
     left: 800px;
+}
+
+.accountPnl {
+    padding-bottom: .2em;
+}
+/* Tablet Styles */
+@media only screen and (max-width: 64em) {
+
+    #wrapper {
+        min-width: 0;
+        width: auto;
+        box-shadow: none;
+        background-color: #FFFFFF;
+    }
+
+    #main {
+        margin-left: 0px;
+    }
+
+    nav {
+        background-color: #90C7E3;
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+        nav a {
+            display: inline;
+            padding: 8px 25px;
+        }
+
+        nav li {
+            display: inline;
+        }
+}
+
+/* Phones Styles */
+@media only screen and (max-width: 40em) {
+    nav, main, #wrapper, header {
+        min-width: 447px;
+    }
+    nav li {
+        display: block;
+        margin: 0;
+        border-bottom: 2px solid #024864;
+    }
 }
