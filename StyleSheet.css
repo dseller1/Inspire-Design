@@ -348,7 +348,7 @@ nav {
     padding-bottom: .2em;
 }
 /* Tablet Styles */
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 80em) {
 
     #wrapper {
         min-width: 0;
@@ -379,8 +379,7 @@ nav {
 }
 
 /* Phones Styles */
-@media only screen and (max-device-width: 736px) { 
-
+@media only screen and (max-width: 67.5em) {
     nav, main, #wrapper, header {
         min-width: 433px;
     }
