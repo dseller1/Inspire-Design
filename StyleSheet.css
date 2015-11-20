@@ -347,8 +347,12 @@ nav {
 .accountPnl {
     padding-bottom: .2em;
 }
+
+.imgChoice {
+    text-align: center;
+}
 /* Tablet Styles */
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 85.375em) {
 
     #wrapper {
         min-width: 0;
@@ -379,9 +383,9 @@ nav {
 }
 
 /* Phones Styles */
-@media only screen and (max-width: 67.5em) {
+@media only screen and (max-width: 50em) {
     nav, main, #wrapper, header {
-        min-width: 433px;
+        min-width: 434px;
     }
     nav li {
         display: block;
