@@ -31,6 +31,7 @@ public partial class inspiration : System.Web.UI.Page
         userNameLbl.Text = curUser.Username;
         userErrLbl.Text = "";
         boardErrLbl.Text = "";
+        resetBoard();
         if (curUser.Account_Type == "client")
         {
             userNamePnl.Visible = false;
@@ -56,7 +57,7 @@ public partial class inspiration : System.Web.UI.Page
         {
 
             boardNamePnl.Visible = true;
-            resetBoard();
+            
             if (boardName != null)
             {
                 loadImages(usersBoardColl, boardName);
