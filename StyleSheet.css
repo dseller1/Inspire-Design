@@ -479,214 +479,193 @@ main {
 
     .colorSwatch1 {
         top: 240px;
-        left: 30px;
+        left: 145px;
     }
 
     .colorSwatch2 {
         top: 240px;
-        left: 160px;
+        left: 275px;
     }
 
     .colorSwatch3 {
         top: 240px;
-        left: 290px;
+        left: 405px;
     }
 
     .patternSwatch1 {
         top: 190px;
-        left: 455px;
+        left: 575px;
     }
 
     .patternSwatch2 {
         top: 190px;
-        left: 635px;
+        left: 755px;
     }
 
     .patternSwatch3 {
         top: 190px;
-        left: 815px;
+        left: 935px;
     }
 
     .chairSwatch1 {
         top: 420px;
-        left: 30px;
+        left: 145px;
     }
 
     .chairSwatch2 {
         top: 420px;
-        left: 230px;
+        left: 345px;
     }
 
     .chairSwatch3 {
         top: 420px;
-        left: 430px;
+        left: 545px;
     }
 
     .ottomanSwatch1 {
         top: 640px;
-        left: 130px;
+        left: 245px;
     }
 
     .ottomanSwatch2 {
         top: 640px;
-        left: 330px;
+        left: 445px;
     }
 
     .ottomanSwatch3 {
         top: 640px;
-        left: 530px;
+        left: 645px;
     }
 
     .rugSwatch1 {
         top: 410px;
-        left: 700px;
+        left: 845px;
     }
 
     .rugSwatch2 {
         top: 610px;
-        left: 800px;
+        left: 945px;
     }
 
     .rugSwatch3 {
         top: 810px;
-        left: 700px;
+        left: 845px;
     }
 
     .roomSwatch1 {
         top: 840px;
-        left: 80px;
+        left: 195px;
     }
 
     .roomSwatch2 {
         top: 890px;
-        left: 230px;
+        left: 345px;
     }
 
     .roomSwatch3 {
         top: 840px;
-        left: 380px;
+        left: 495px;
     }
 }
-@media only screen and (max-width: 64em) {
 
-    #wrapper {
-        min-width: 0;
-        width: auto;
-        box-shadow: none;
-        background-color: #FFFFFF;
+@media only screen and (max-width: 67.5em) {
+
+    #inspiration {
+        min-height: 950px;
     }
-
-    main {
-        margin-left: 0px;
-    }
-
-    nav {
-        background-color: #90C7E3;
-        float: none;
-        width: auto;
-        text-align: center;
-    }
-
-        nav a {
-            display: inline;
-            padding: 8px 25px;
-        }
-
-        nav li {
-            display: inline;
-        }
-
     .colorSwatch1 {
-        top: 240px;
-        left: 30px;
+        top: 250px;
+        left: 42.5px;
     }
 
     .colorSwatch2 {
-        top: 240px;
-        left: 160px;
+        top: 250px;
+        left: 172.5px;
     }
 
     .colorSwatch3 {
-        top: 240px;
-        left: 290px;
+        top: 250px;
+        left: 302.5px;
     }
 
     .patternSwatch1 {
-        top: 190px;
-        left: 455px;
+        top: 200px;
+        left: 457.5px;
     }
 
     .patternSwatch2 {
-        top: 190px;
-        left: 635px;
+        top: 200px;
+        left: 647.5px;
     }
 
     .patternSwatch3 {
-        top: 190px;
-        left: 815px;
+        top: 200px;
+        left: 837.5px;
     }
 
     .chairSwatch1 {
-        top: 420px;
-        left: 30px;
+        top: 430px;
+        left: 42.5px;
     }
 
     .chairSwatch2 {
-        top: 420px;
-        left: 230px;
+        top: 430px;
+        left: 242.5px;
     }
 
     .chairSwatch3 {
-        top: 420px;
-        left: 430px;
+        top: 430px;
+        left: 442.5px;
     }
 
     .ottomanSwatch1 {
-        top: 640px;
-        left: 130px;
+        top: 650px;
+        left: 122.5px;
     }
 
     .ottomanSwatch2 {
-        top: 640px;
-        left: 330px;
+        top: 650px;
+        left: 322.5px;
     }
 
     .ottomanSwatch3 {
-        top: 640px;
-        left: 530px;
+        top: 650px;
+        left: 522.5px;
     }
 
     .rugSwatch1 {
-        top: 410px;
-        left: 700px;
+        top: 420px;
+        left: 722.5px;
     }
 
     .rugSwatch2 {
-        top: 610px;
-        left: 800px;
+        top: 620px;
+        left: 822.5px;
     }
 
     .rugSwatch3 {
-        top: 810px;
-        left: 700px;
+        top: 820px;
+        left: 722.5px;
     }
 
     .roomSwatch1 {
-        top: 840px;
-        left: 80px;
+        top: 850px;
+        left: 72.5px;
     }
 
     .roomSwatch2 {
-        top: 890px;
-        left: 230px;
+        top: 900px;
+        left: 222.5px;
     }
 
     .roomSwatch3 {
-        top: 840px;
-        left: 380px;
+        top: 850px;
+        left: 372.5px;
     }
 }
 
+
+/* Smaller Web Styles */
 @media only screen and (max-width: 40.1em) {
 
     nav, main, #wrapper, header {
@@ -794,8 +773,128 @@ main {
     }
 }
 
+@media only screen and (max-device-width: 80em) {
+
+    #wrapper {
+        min-width: 0;
+        width: auto;
+        box-shadow: none;
+        background-color: #FFFFFF;
+    }
+
+    main {
+        margin-left: 0px;
+    }
+
+    nav {
+        background-color: #90C7E3;
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+        nav a {
+            display: inline;
+            padding: 8px 25px;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+    .colorSwatch1 {
+        top: 240px;
+        left: 145px;
+    }
+
+    .colorSwatch2 {
+        top: 240px;
+        left: 275px;
+    }
+
+    .colorSwatch3 {
+        top: 240px;
+        left: 405px;
+    }
+
+    .patternSwatch1 {
+        top: 190px;
+        left: 575px;
+    }
+
+    .patternSwatch2 {
+        top: 190px;
+        left: 755px;
+    }
+
+    .patternSwatch3 {
+        top: 190px;
+        left: 935px;
+    }
+
+    .chairSwatch1 {
+        top: 420px;
+        left: 145px;
+    }
+
+    .chairSwatch2 {
+        top: 420px;
+        left: 345px;
+    }
+
+    .chairSwatch3 {
+        top: 420px;
+        left: 545px;
+    }
+
+    .ottomanSwatch1 {
+        top: 640px;
+        left: 245px;
+    }
+
+    .ottomanSwatch2 {
+        top: 640px;
+        left: 445px;
+    }
+
+    .ottomanSwatch3 {
+        top: 640px;
+        left: 645px;
+    }
+
+    .rugSwatch1 {
+        top: 410px;
+        left: 845px;
+    }
+
+    .rugSwatch2 {
+        top: 610px;
+        left: 945px;
+    }
+
+    .rugSwatch3 {
+        top: 810px;
+        left: 845px;
+    }
+
+    .roomSwatch1 {
+        top: 840px;
+        left: 195px;
+    }
+
+    .roomSwatch2 {
+        top: 890px;
+        left: 345px;
+    }
+
+    .roomSwatch3 {
+        top: 840px;
+        left: 495px;
+    }
+}
+
 /* Phone Styles */
-@media only screen and (max-device-width: 1080px) {
+@media only screen and (max-device-width: 67.5em) {
 
     nav, main, #wrapper, header {
         min-width: 434px;
@@ -808,185 +907,96 @@ main {
         }
 
     #inspiration {
-        min-height: 1350px;
+        min-height: 975px;
     }
 
-    /*.colorSwatch1 {
-        top: 400px;
-        left: 20px;
-    }
-
-    .colorSwatch2 {
-        top: 400px;
-        left: 150px;
-    }
-
-    .colorSwatch3 {
-        top: 400px;
-        left: 280px;
-    }
-
-    .patternSwatch1 {
-        top: 730px;
-        left: 80px;
-    }
-
-    .patternSwatch2 {
-        top: 730px;
-        left: 260px;
-    }
-
-    .patternSwatch3 {
-        top: 730px;
-        left: 440px;
-    }
-
-    .chairSwatch1 {
-        top: 540px;
-        left: 20px;
-    }
-
-    .chairSwatch2 {
-        top: 540px;
-        left: 220px;
-    }
-
-    .chairSwatch3 {
-        top: 540px;
-        left: 420px;
-    }
-
-    .ottomanSwatch1 {
-        top: 930px;
-        left: 20px;
-    }
-
-    .ottomanSwatch2 {
-        top: 930px;
-        left: 220px;
-    }
-
-    .ottomanSwatch3 {
-        top: 930px;
-        left: 420px;
-    }
-
-    .rugSwatch1 {
-        top: 1120px;
-        left: 420px;
-    }
-
-    .rugSwatch2 {
-        top: 1300px;
-        left: 320px;
-    }
-
-    .rugSwatch3 {
-        top: 1480px;
-        left: 420px;
-    }
-
-    .roomSwatch1 {
-        top: 1120px;
-        left: 70px;
-    }
-
-    .roomSwatch2 {
-        top: 1280px;
-        left: 120px;
-    }
-
-    .roomSwatch3 {
-        top: 1440px;
-        left: 70px;
-    }*/
     .colorSwatch1 {
-        top: 240px;
-        left: 30px;
+        top: 415px;
+        left: 42.5px;
     }
 
     .colorSwatch2 {
-        top: 240px;
-        left: 160px;
+        top: 415px;
+        left: 172.5px;
     }
 
     .colorSwatch3 {
-        top: 240px;
-        left: 290px;
+        top: 415px;
+        left: 302.5px;
     }
 
     .patternSwatch1 {
-        top: 190px;
-        left: 455px;
+        top: 365px;
+        left: 457.5px;
     }
 
     .patternSwatch2 {
-        top: 190px;
-        left: 635px;
+        top: 365px;
+        left: 647.5px;
     }
 
     .patternSwatch3 {
-        top: 190px;
-        left: 815px;
+        top: 365px;
+        left: 837.5px;
     }
 
     .chairSwatch1 {
-        top: 420px;
-        left: 30px;
+        top: 595px;
+        left: 42.5px;
     }
 
     .chairSwatch2 {
-        top: 420px;
-        left: 230px;
+        top: 595px;
+        left: 242.5px;
     }
 
     .chairSwatch3 {
-        top: 420px;
-        left: 430px;
+        top: 595px;
+        left: 442.5px;
     }
 
     .ottomanSwatch1 {
-        top: 640px;
-        left: 130px;
+        top: 815px;
+        left: 122.5px;
     }
 
     .ottomanSwatch2 {
-        top: 640px;
-        left: 330px;
+        top: 815px;
+        left: 322.5px;
     }
 
     .ottomanSwatch3 {
-        top: 640px;
-        left: 530px;
+        top: 815px;
+        left: 522.5px;
     }
 
     .rugSwatch1 {
-        top: 410px;
-        left: 700px;
+        top: 585px;
+        left: 722.5px;
     }
 
     .rugSwatch2 {
-        top: 610px;
-        left: 800px;
+        top: 785px;
+        left: 822.5px;
     }
 
     .rugSwatch3 {
-        top: 810px;
-        left: 700px;
+        top: 985px;
+        left: 722.5px;
     }
 
     .roomSwatch1 {
-        top: 840px;
-        left: 80px;
+        top: 1015px;
+        left: 72.5px;
     }
 
     .roomSwatch2 {
-        top: 890px;
-        left: 230px;
+        top: 1065px;
+        left: 222.5px;
     }
 
     .roomSwatch3 {
-        top: 840px;
-        left: 380px;
+        top: 1015px;
+        left: 372.5px;
     }
 }
