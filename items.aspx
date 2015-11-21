@@ -95,7 +95,6 @@
         <asp:Button ID="changeBoardBtn" runat="server" OnClick="changeBoardBtn_Click" Text="Change Board" CssClass="Button" Width="115px" />
         <asp:Button ID="switchUserBtn" runat="server" OnClick="switchUserBtn_Click" Text="Switch User" CssClass="Button" Width="107px" Visible="false" />
     </asp:Panel>
-
     <asp:GridView ID="itemsGrid" runat="server" CellPadding="5" AutoGenerateColumns="False" DataSource='<%# getItemsData() %>' GridLines="None" OnRowCommand="itemsGrid_RowCommand">
         <Columns>
             <asp:TemplateField ItemStyle-CssClass="itemsGrid">

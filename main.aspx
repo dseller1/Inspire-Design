@@ -9,7 +9,7 @@
         <br />
         <asp:Button ID="backToElementsBtn" runat="server" Text="Back To Elements Page" OnClick="backToElementsBtn_Click" CssClass="Button" />
     </asp:Panel>
-    <asp:Panel ID="imagePnl" runat="server" Visible="true">
+    <asp:Panel ID="imagePnl" CssClass="imgChoice" runat="server" Visible="true">
         <asp:Image ID="Image1" runat="server" Width="256px" Height="256px" />
         <br />
         <asp:Label ID="displayLbl" runat="server"></asp:Label><br />
