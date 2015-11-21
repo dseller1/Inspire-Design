@@ -75,8 +75,9 @@ h1 {
     line-height: 40px;
     padding-right: 2%;
 }
+
 .leftpad {
-    width:94px;
+    width: 94px;
     padding-left: 2%;
 }
 
@@ -351,8 +352,11 @@ nav {
 .imgChoice {
     text-align: center;
 }
+
+
+
 /* Tablet Styles */
-@media only screen and (max-width: 85.375em) {
+@media only screen and (max-width: 64em){
 
     #wrapper {
         min-width: 0;
@@ -383,13 +387,28 @@ nav {
 }
 
 /* Phones Styles */
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 40.1em) {
+
     nav, main, #wrapper, header {
         min-width: 434px;
     }
-    nav li {
-        display: block;
-        margin: 0;
-        border-bottom: 2px solid #024864;
+
+        nav li {
+            display: block;
+            margin: 0;
+            border-bottom: 2px solid #024864;
+        }
+}
+
+@media only screen and (max-device-width: 736px) {
+
+    nav, main, #wrapper, header {
+        min-width: 434px;
     }
+
+        nav li {
+            display: block;
+            margin: 0;
+            border-bottom: 2px solid #024864;
+        }
 }
