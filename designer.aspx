@@ -7,18 +7,18 @@
         <asp:Button ID="addItemDbBtn" runat="server" Text="Add Item to Database" OnClick="addItemDbBtn_Click" CssClass="Button" Width="164px" />
     </asp:Panel>
     <asp:Panel ID="urlPnl" runat="server" Visible="false">
-        <asp:ValidationSummary ID="validationSummary1" runat="server" DisplayMode="List" CssClass="Validator"/>
+        <asp:ValidationSummary ID="validationSummary1" runat="server" DisplayMode="List" CssClass="Validator" />
         <br />
         <asp:TextBox ID="imageUrlTxt" runat="server" TextMode="Url" placeholder="Enter Image URL.." CssClass="TextBox" />
         <br />
         <asp:RequiredFieldValidator ID="imageUrlFieldValidator" runat="server" ControlToValidate="imageUrlTxt" ErrorMessage="Image URL is required." Display="None" />
         <br />
-        <asp:TextBox id="descriptTxt" runat="server" TextMode="MultiLine" CssClass="TextBox" placeholder="Enter Description.." />
+        <asp:TextBox ID="descriptTxt" runat="server" TextMode="MultiLine" CssClass="TextBox" placeholder="Enter Description.." />
         <asp:RequiredFieldValidator ID="descriptFieldValidator" runat="server" ControlToValidate="descriptTxt" ErrorMessage="Description is required." Display="None" />
-        <asp:Button ID="urlSbmtBtn" runat="server" Text="Submit" OnClick="urlSbmtBtn_Click" style="position: relative; top: -9px;" CssClass="Button" />
+        <asp:Button ID="urlSbmtBtn" runat="server" Text="Submit" OnClick="urlSbmtBtn_Click" Style="position: relative; top: -9px;" CssClass="Button" />
     </asp:Panel>
     <asp:Panel ID="addItemPnl" runat="server" Visible="false" Style="text-align: center;">
-        <asp:ValidationSummary ID="validationSummary2" runat="server" DisplayMode="List" CssClass="Validator"/>
+        <asp:ValidationSummary ID="validationSummary2" runat="server" DisplayMode="List" CssClass="Validator" />
         <div id="Elements">
             <h2>Elements</h2>
             <asp:DropDownList ID="colorList" runat="server" Visible="false" />
@@ -130,49 +130,70 @@
         <div id="Buttons" style="text-align: center;">
             <br />
             <br />
-            <asp:Button ID="addItemBtn" runat="server" OnClick="addItemBtn_Click" CssClass="Button" Text="Submit Item" Width="130px" />
+            <asp:Button ID="addItemBtn" runat="server" OnClick="addItemBtn_Click" CssClass="Button" Text="Submit Item" Width="98px" />
+
         </div>
     </asp:Panel>
     <asp:Panel ID="confirmPnl" runat="server" Visible="false">
-        <asp:Image id="itemImage" runat="server" />
+        <asp:Image ID="itemImage" runat="server" />
         <br />
-        <asp:Label ID="descriptLbl" runat="server" Text="Description: "/>
+        <asp:Label ID="description" runat="server" Text="Description: " />
+        <asp:Label ID="descriptLbl" runat="server" />
         <br />
-        <asp:Label ID="typeLbl" runat="server" Text="Type: "/>
+        <asp:Label ID="type" runat="server" Text="Type: " />
+        <asp:Label ID="typeLbl" runat="server" />
         <br />
-        <asp:Label ID="colorLbl" runat="server" Text="Color: " />
+        <asp:Label ID="color" runat="server" Text="Color: " />
+        <asp:Label ID="colorLbl" runat="server" />
         <br />
-        <asp:Label ID="lineLbl" runat="server" Text="Line Structure: " />
+        <asp:Label ID="line" runat="server" Text="Line Structure: " />
+        <asp:Label ID="lineLbl" runat="server" />
         <br />
-        <asp:Label ID="lightLbl" runat="server" Text="Light: " />
+        <asp:Label ID="light" runat="server" Text="Light: " />
+        <asp:Label ID="lightLbl" runat="server" />
         <br />
-        <asp:Label ID="formLbl" runat="server" Text="Form: " />
+        <asp:Label ID="form" runat="server" Text="Form: " />
+        <asp:Label ID="formLbl" runat="server" />
         <br />
-        <asp:Label ID="spaceLbl" runat="server" Text="Space: " />
+        <asp:Label ID="space" runat="server" Text="Space: " />
+        <asp:Label ID="spaceLbl" runat="server" />
         <br />
-        <asp:Label ID="textureLbl" runat="server" Text="Texture: " />
+        <asp:Label ID="texture" runat="server" Text="Texture: " />
+        <asp:Label ID="textureLbl" runat="server" />
         <br />
-        <asp:Label ID="patternLbl" runat="server" Text="Pattern: " />
+        <asp:Label ID="pattern" runat="server" Text="Pattern: " />
+        <asp:Label ID="patternLbl" runat="server" />
         <br />
-        <asp:Label ID="massLbl" runat="server" Text="Mass: " />
+        <asp:Label ID="mass" runat="server" Text="Mass: " />
+        <asp:Label ID="massLbl" runat="server" />
         <br />
-        <asp:Label ID="balanceLbl" runat="server" Text="Balance: " />
+        <asp:Label ID="balance" runat="server" Text="Balance: " />
+        <asp:Label ID="balanceLbl" runat="server" />
         <br />
-        <asp:Label ID="unityLbl" runat="server" Text="Unity: " />
+        <asp:Label ID="unity" runat="server" Text="Unity: " />
+        <asp:Label ID="unityLbl" runat="server" />
         <br />
-        <asp:Label ID="harmonyLbl" runat="server" Text="Harmony: " />
+        <asp:Label ID="harmony" runat="server" Text="Harmony: " />
+        <asp:Label ID="harmonyLbl" runat="server" />
         <br />
-        <asp:Label ID="rhythmLbl" runat="server" Text="Rhythm: " />
+        <asp:Label ID="rhythm" runat="server" Text="Rhythm: " />
+        <asp:Label ID="rhythmLbl" runat="server" />
         <br />
-        <asp:Label ID="proportionLbl" runat="server" Text="Proportion: " />
+        <asp:Label ID="proportion" runat="server" Text="Proportion: " />
+        <asp:Label ID="proportionLbl" runat="server" />
         <br />
-        <asp:Label ID="varietyLbl" runat="server" Text="Variety: " />
+        <asp:Label ID="variety" runat="server" Text="Variety: " />
+        <asp:Label ID="varietyLbl" runat="server" />
         <br />
-        <asp:Label ID="emphasisLbl" runat="server" Text="Emphasis: " />
+        <asp:Label ID="emphasis" runat="server" Text="Emphasis: " />
+        <asp:Label ID="emphasisLbl" runat="server" />
         <br />
-        <asp:Label ID="scaleLbl" runat="server" Text="Scale: " />
+        <asp:Label ID="scale" runat="server" Text="Scale: " />
+        <asp:Label ID="scaleLbl" runat="server" />
         <br />
         <asp:Button ID="submitItemBtn" runat="server" OnClick="submitItemBtn_Click" Text="Add Item" CssClass="Button" />
+        &nbsp;&nbsp;
+        <asp:Button ID="editItemBtn" runat="server" OnClick="editItemBtn_Click" CssClass="Button" Text="Edit Item" Width="84px" />
     </asp:Panel>
 </asp:Content>
 

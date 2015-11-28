@@ -60,24 +60,24 @@ public partial class designer : System.Web.UI.Page
         Session["newItem"] = newItem;
 
         itemImage.ImageUrl = newItem.Image_Link;
-        descriptLbl.Text += newItem.Description;
-        typeLbl.Text += newItem.Type;
-        colorLbl.Text += newItem.Color;
-        lineLbl.Text += newItem.Line;
-        lightLbl.Text += newItem.Light;
-        formLbl.Text += newItem.Form;
-        spaceLbl.Text += newItem.Space;
-        textureLbl.Text += newItem.Texture;
-        patternLbl.Text += newItem.Pattern;
-        massLbl.Text += newItem.Mass;
-        balanceLbl.Text += newItem.Balance;
-        unityLbl.Text += newItem.Unity;
-        harmonyLbl.Text += newItem.Harmony;
-        rhythmLbl.Text += newItem.Rhythm;
-        proportionLbl.Text += newItem.Proportion;
-        varietyLbl.Text += newItem.Variety;
-        emphasisLbl.Text += newItem.Emphasis;
-        scaleLbl.Text += newItem.Scale;
+        descriptLbl.Text = newItem.Description;
+        typeLbl.Text = newItem.Type;
+        colorLbl.Text = newItem.Color;
+        lineLbl.Text = newItem.Line;
+        lightLbl.Text = newItem.Light;
+        formLbl.Text = newItem.Form;
+        spaceLbl.Text = newItem.Space;
+        textureLbl.Text = newItem.Texture;
+        patternLbl.Text = newItem.Pattern;
+        massLbl.Text = newItem.Mass;
+        balanceLbl.Text = newItem.Balance;
+        unityLbl.Text = newItem.Unity;
+        harmonyLbl.Text = newItem.Harmony;
+        rhythmLbl.Text = newItem.Rhythm;
+        proportionLbl.Text = newItem.Proportion;
+        varietyLbl.Text = newItem.Variety;
+        emphasisLbl.Text = newItem.Emphasis;
+        scaleLbl.Text = newItem.Scale;
         addItemPnl.Visible = false;
         confirmPnl.Visible = true;
     }
@@ -91,5 +91,10 @@ public partial class designer : System.Web.UI.Page
         Session["allItems"] = allItems;
         Response.Redirect(Request.RawUrl);
 
+    }
+    protected void editItemBtn_Click(object sender, EventArgs e)
+    {
+        confirmPnl.Visible = false;
+        urlPnl.Visible = true;
     }
 }
