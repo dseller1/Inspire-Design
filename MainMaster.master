@@ -26,7 +26,7 @@
                     <li><a href="boards.aspx">Boards</a></li>
                     <li><a href="items.aspx">Items</a></li>
                     <li><a href="inspiration.aspx">Inspiration</a></li>
-                    <li><a href="maps.aspx">Maps</a></li>
+                    <li><a id="accountTypeLink" runat="server"></a></li>
                 </ul>
             </nav>
             <main>

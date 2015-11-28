@@ -29,6 +29,10 @@ public partial class RegisterPage : System.Web.UI.Page
                 newUser.Password = user.HashPassword(passwordTxt.Text);
                 newUser.Email = emailTxt.Text;
                 newUser.Phone = phoneTxt.Text;
+                if (accountTypeBox.Checked == true)
+                {
+                    newUser.Account_Type = "designer";
+                }
                 if (user.checkUsername(userInfoColl, newUser).Count() == 0)
                 {
                     if (user.checkEmail(userInfoColl, newUser).Count() == 0)

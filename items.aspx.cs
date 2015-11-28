@@ -143,7 +143,7 @@ public partial class ItemsPage : System.Web.UI.Page
     {
         Response.Redirect("~/elements.aspx");
     }
-    protected void itemsGrid_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void itemGrid_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "Add_Item")
         {
@@ -173,7 +173,7 @@ public partial class ItemsPage : System.Web.UI.Page
         {
             changeBoardPnl.Visible = false;
             optionsPnl.Visible = true;
-            itemsGrid.Visible = true;
+            itemGrid.Visible = true;
             boardName = boardNameList.SelectedItem.Value;
             boardNamePnl.Visible = true;
             Session["boardName"] = boardName;
@@ -193,7 +193,7 @@ public partial class ItemsPage : System.Web.UI.Page
         boardName = null;
         Session["boardName"] = boardName;
         changeBoardPnl.Visible = true;
-        itemsGrid.Visible = false;
+        itemGrid.Visible = false;
         optionsPnl.Visible = false;
         boardNamePnl.Visible = false;
     }
@@ -218,10 +218,10 @@ public partial class ItemsPage : System.Web.UI.Page
         }
         newBoardPnl.Visible = false;
     }
-    protected void itemsGrid_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    protected void itemGrid_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {
-        itemsGrid.PageIndex = e.NewPageIndex;
-        itemsGrid.DataBind();
+        itemGrid.PageIndex = e.NewPageIndex;
+        itemGrid.DataBind();
     }
     protected void selectUsrBtn_Click(object sender, EventArgs e)
     {

@@ -212,9 +212,13 @@ main {
 
 .itemsGrid {
     text-align: center;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;   
 }
 
+.image {
+    height: 251px;
+    width: 251px;
+}
 .ListBox {
     width: 100px;
 }
@@ -359,6 +363,7 @@ main {
     #inspiration {
         min-height: 950px;
     }
+
     .colorSwatch1 {
         top: 200px;
         left: 250px;
@@ -761,6 +766,7 @@ main {
     #inspiration {
         min-height: 950px;
     }
+
     .colorSwatch1 {
         top: 250px;
         left: 17px;
@@ -856,6 +862,7 @@ main {
     main {
         background-color: white;
     }
+
     .colorSwatch1 {
         top: 250px;
         left: 42.5px;
@@ -1053,11 +1060,13 @@ main {
         left: 70px;
     }
 }
+
 @media only screen and (max-width: 39em) {
     main {
         background-color: red;
     }
 }
+
 @media only screen and (max-device-width: 80em) {
 
     #wrapper {

@@ -29,10 +29,9 @@
     <asp:GridView ID="boardItemsGrid" runat="server" RowStyle-CssClass="itemsGrid" DataSource='<%# getBoardData() %>' AutoGenerateColumns="False" OnRowCommand="boardItemsGrid_RowCommand">
         <Columns>
             <asp:BoundField HeaderText="Item ID" DataField="ItemID" />
-            <asp:ImageField HeaderText="Image" DataImageUrlField="PictureURL" />
+            <asp:ImageField HeaderText="Image" DataImageUrlField="PictureURL" ItemStyle-CssClass="image" />
             
             <asp:BoundField HeaderText="Item Description" DataField="Description" />
-            <asp:ButtonField HeaderText="Delete" ButtonType="Image" CommandName="Delete_Item" ImageUrl="~/Images/redX.png"/>
             <asp:TemplateField HeaderText="Delete">
                 <ItemTemplate>
                     <asp:ImageButton ID="deleteBtn" runat="server" ImageUrl="~/Images/redX.png" CommandName="Delete_Item" CommandArgument='<%# Eval("ItemID") %>' OnClientClick="return confirm('Are you sure you want to delete this item?');" />

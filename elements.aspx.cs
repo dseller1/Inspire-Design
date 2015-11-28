@@ -31,7 +31,7 @@ public partial class ElementsPage : System.Web.UI.Page
         designUser = (user)Session["designUser"];
         userInfoColl = myDB.getUserInfoCollection();
         imgColl = myDB.getImagesCollection();
-        allItems = p.getItems(imgColl);
+        allItems = product_image.getItems(imgColl);
         Session["imgColl"] = imgColl;
         Session["allItems"] = allItems;
 

@@ -95,26 +95,26 @@
         <asp:Button ID="changeBoardBtn" runat="server" OnClick="changeBoardBtn_Click" Text="Change Board" CssClass="Button" Width="115px" />
         <asp:Button ID="switchUserBtn" runat="server" OnClick="switchUserBtn_Click" Text="Switch User" CssClass="Button" Width="107px" Visible="false" />
     </asp:Panel>
-    <asp:GridView ID="itemsGrid" runat="server" CellPadding="5" AutoGenerateColumns="False" DataSource='<%# getItemsData() %>' GridLines="None" OnRowCommand="itemsGrid_RowCommand">
+    <asp:GridView ID="itemGrid" runat="server" CellPadding="5" AutoGenerateColumns="False" DataSource='<%# getItemsData() %>' GridLines="None" OnRowCommand="itemGrid_RowCommand">
         <Columns>
-            <asp:TemplateField ItemStyle-CssClass="itemsGrid">
+            <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:ImageButton ID="PictureURL1" runat="server" ImageUrl='<%# Eval("PictureURL1") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL1") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" />
+                    <asp:ImageButton ID="PictureURL1" runat="server" ImageUrl='<%# Eval("PictureURL1") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL1") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" style="max-height: 251px; max-width: 251px;"/>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField ItemStyle-CssClass="itemsGrid">
+            <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:ImageButton ID="PictureURL2" runat="server" ImageUrl='<%# Eval("PictureURL2") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL2") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" />
+                    <asp:ImageButton ID="PictureURL2" runat="server" ImageUrl='<%# Eval("PictureURL2") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL2") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" style="max-height: 251px; max-width: 251px;"/>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField ItemStyle-CssClass="itemsGrid">
+            <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:ImageButton ID="PictureURL3" runat="server" ImageUrl='<%# Eval("PictureURL3") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL3") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" />
+                    <asp:ImageButton ID="PictureURL3" runat="server" ImageUrl='<%# Eval("PictureURL3") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL3") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" style="max-height: 251px; max-width: 251px;"/>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField ItemStyle-CssClass="itemsGrid">
+            <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:ImageButton ID="PictureURL4" runat="server" ImageUrl='<%# Eval("PictureURL4") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL4") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" />
+                    <asp:ImageButton ID="PictureURL4" runat="server" ImageUrl='<%# Eval("PictureURL4") %>' CommandName="Add_Item" CommandArgument='<%# Eval("PictureURL4") %>' OnClientClick="return confirm('Are you sure you want to add this item?');" style="max-height: 251px; max-width: 251px;"/>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
