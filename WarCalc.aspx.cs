@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using HtmlAgilityPack;
-
 public partial class WarCalc : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -17,14 +12,14 @@ public partial class WarCalc : System.Web.UI.Page
     {
         if (tbLand.Text.Length > 0)
         {
-            if (Validation.validateNumber(tbLand.Text))
-            {
+            //if (Validation.validateNumber(tbLand.Text))
+            //{
                 getArAttacks(Convert.ToDouble(tbLand.Text));
-            }
-            else
-            {
-                //errorMessage(1);
-            }
+            //}
+            //else
+            //{
+            //    //errorMessage(1);
+            //}
         }
         else
         {
@@ -36,15 +31,15 @@ public partial class WarCalc : System.Web.UI.Page
     {
         if (tbPopulation.Text.Length > 0)
         {
-            if (Validation.validateNumber(tbPopulation.Text))
-            {
+            //if (Validation.validateNumber(tbPopulation.Text))
+            //{
                 getGaAttacks(Convert.ToDouble(tbPopulation.Text));
                 //createGaExcel(Convert.ToInt64(tbPopulation.Text));
-            }
-            else
-            {
-                //errorMessage(1);
-            }
+            //}
+            //else
+            //{
+            //    //errorMessage(1);
+            //}
         }
         else
         {

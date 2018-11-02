@@ -13,29 +13,29 @@ public partial class LandGrab : System.Web.UI.Page
         lblEstGrab.Text = "";
         if (tbAttacks.Text.Length > 0)
         {
-            if (!Validation.validateNumber(tbAttacks.Text))
-            {
-                errorMessage(1);
-            }
+            //if (!Validation.validateNumber(tbAttacks.Text))
+            //{
+            //    errorMessage(1);
+            //}
         }
         if (tbUserLand.Text.Length > 0 && tbTargetLand.Text.Length > 0)
         {
-            if (Validation.validateNumber(tbUserLand.Text) && Validation.validateNumber(tbTargetLand.Text))
-            {
+            //if (Validation.validateNumber(tbUserLand.Text) && Validation.validateNumber(tbTargetLand.Text))
+            //{
                 int attacks = 0;
                 if (tbAttacks.Text.Length > 0)
                 {
-                    if (Validation.validateNumber(tbAttacks.Text))
-                    {
+                    //if (Validation.validateNumber(tbAttacks.Text))
+                    //{
                         attacks = Convert.ToInt32(tbAttacks.Text);
-                    }
+                    //}
                 }
                 calcLandGrab(Convert.ToDouble(tbUserLand.Text), Convert.ToDouble(tbTargetLand.Text), attacks);
-            }
-            else
-            {
-                errorMessage(1);
-            }
+            //}
+            //else
+            //{
+            //    errorMessage(1);
+            //}
         }
     }
 
