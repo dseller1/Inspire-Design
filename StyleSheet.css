@@ -1,1296 +1,328 @@
 ﻿/* Computer Styles */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: lightgray;
+	font-family: 'Helvetica Neue', sans-serif;
+	background-color: lightgray;
 }
 
 .TextBox {
-    /* Styles */
-    background: #fff;
-    border-radius: 7px;
-    border: 1px solid rgba(0,0,0,0.15);
-    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-    cursor: pointer;
-    outline: none;
-    height: 25px;
-    width: 175px;
-    /* Font settings */
-    font-weight: bold;
-    color: #8AA8BD;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: medium;
+	/* Styles */
+	background: #fff;
+	border-radius: 7px;
+	border: 1px solid rgba(0,0,0,0.15);
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	/*cursor: pointer;*/
+	outline: none;
+	height: 25px;
+	width: 175px;
+	text-align: center;
+	/* Font settings */
+	font-weight: bold;
+	color: #8AA8BD;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: medium;
 }
 
 .DropDownList {
-    position: relative;
-    width: 200px;
-    margin: 0 auto;
-    padding: 10px;
-    /* Styles */
-    background: #fff;
-    border-radius: 7px;
-    border: 1px solid rgba(0,0,0,0.15);
-    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-    cursor: pointer;
-    outline: none;
-    /* Font settings */
-    font-weight: bold;
-    color: #8AA8BD;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: medium;
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px;
+	/* Styles */
+	background: #fff;
+	border-radius: 7px;
+	border: 1px solid rgba(0,0,0,0.15);
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	cursor: pointer;
+	outline: none;
+	/* Font settings */
+	font-weight: bold;
+	color: #8AA8BD;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: medium;
 }
 
 #wrapper {
-    background-color: #90C7E3;
-    box-shadow: 6px 6px 0 0 #333333;
-    /*min-width: 960px;
+	background-color: #90C7E3;
+	box-shadow: 6px 6px 0 0 #333333;
+	/*min-width: 960px;
     max-width: 2048px;*/
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    max-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	max-height: 100%;
 }
 
 header {
-    background: #024864;
-    color: #FFFFFF;
-    display: flex;
-    height: 60px;
-    padding-top: 20px;
+	background: #024864;
+	color: #FFFFFF;
+	display: flex;
+	height: 60px;
+	padding-top: 20px;
 }
 
 h1 {
-    flex: 1;
-    text-align: center;
-    margin-bottom: 0;
-    margin-top: 0;
-    line-height: 40px;
-    font-family: 'Helvetica Neue', sans-serif;
+	flex: 1;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+	line-height: 40px;
+	font-family: 'Helvetica Neue', sans-serif;
 }
 
 .accountBtn {
-    width: 94px;
-    margin-bottom: 0;
-    margin-top: 0;
-    line-height: 40px;
-    padding-right: 2%;
+	width: 94px;
+	margin-bottom: 0;
+	margin-top: 0;
+	line-height: 40px;
+	padding-right: 2%;
 }
 
 .leftpad {
-    width: 94px;
-    padding-left: 2%;
+	width: 94px;
+	padding-left: 2%;
 }
 
 h2 {
-    color: #024864;
+	color: #024864;
 }
 
 nav {
-    margin: 0px;
-    padding: 0px;
-    float: left;
-    width: 100px;
-    font-weight: bold;
-    line-height: 3;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    height: auto !important;
-    height: 100%;
-    min-height: 100%;
-    text-rendering: optimizeLegibility;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 120px;
+	font-weight: bold;
+	line-height: 3;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	text-rendering: optimizeLegibility;
 }
 
-    nav a {
-        text-decoration: none;
-        display: block;
-        height: 40px;
-        padding: 10px 25px;
-        width: 100%;
-    }
+	nav a {
+		text-decoration: none;
+		display: block;
+		height: 40px;
+		padding: 10px 25px;
+		width: 100%;
+	}
 
-    nav ul {
-        margin: 0px;
-        padding-left: 0px;
-        width: 100%;
-        list-style-type: none;
-        line-height: 40px;
-    }
+	nav ul {
+		margin: 0px;
+		padding-left: 0px;
+		width: 100%;
+		list-style-type: none;
+		line-height: 40px;
+	}
 
-        nav ul li a {
-            color: #000033;
-        }
+		nav ul li a {
+			color: #000033;
+		}
 
-            nav ul li a:hover {
-                background-color: #024864;
-                color: #FFFFFF;
-                width: 90%;
-            }
+			nav ul li a:hover {
+				background-color: #024864;
+				color: #FFFFFF;
+				width: 90%;
+			}
 
 main {
-    padding: 10px 30px 30px 10px;
-    margin-left: 140px;
-    background-color: #FFFFFF;
-    height: auto;
-    min-height: 260px;
-    width: auto;
-    min-width: 200px;
+	padding: 10px 30px 30px 10px;
+	margin-left: 158px;
+	background-color: #FFFFFF;
+	height: auto;
+	min-height: 380px;
+	width: auto;
+	min-width: 200px;
 }
 
 .Button {
-    border-top: 1px solid #96d1f8;
-    background: #65a9d7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-    background: -o-linear-gradient(top, #3e779d, #65a9d7);
-    padding: 5px 10px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    box-shadow: rgba(0,0,0,1) 0 1px 0;
-    text-shadow: rgba(0,0,0,.4) 0 1px 0;
-    color: white;
-    font-size: 14px;
-    font-family: Helvetica, Arial, Sans-Serif;
-    text-decoration: none;
-    vertical-align: middle;
+	border-top: 1px solid #96d1f8;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	padding: 5px 10px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	color: white;
+	font-size: 14px;
+	font-family: Helvetica, Arial, Sans-Serif;
+	text-decoration: none;
+	vertical-align: middle;
 }
 
-    .Button:hover {
-        border-top-color: #28597a;
-        background: #28597a;
-        color: #ccc;
-    }
+	.Button:hover {
+		border-top-color: #28597a;
+		background: #28597a;
+		color: #ccc;
+	}
 
-    .Button:active {
-        border-top-color: #1b435e;
-        background: #1b435e;
-    }
+	.Button:active {
+		border-top-color: #1b435e;
+		background: #1b435e;
+	}
 
 .Label {
-    color: red;
-    padding-left: 5px;
-    font-family: Helvetica, Arial, Sans-Serif;
+	color: red;
+	padding-left: 5px;
+	font-family: Helvetica, Arial, Sans-Serif;
 }
 
 #Elements {
-    float: left;
-    width: 50%;
+	float: left;
+	width: 50%;
 }
 
 #Principles {
-    float: right;
-    width: 50%;
+	float: right;
+	width: 50%;
 }
 
 #Buttons {
-    text-align: center;
+	text-align: center;
 }
 
 .Validator {
-    color: red;
-    font-size: 14px;
-    font-family: Helvetica, Arial, Sans-Serif;
-    font-weight: bold;
+	color: red;
+	font-size: 14px;
+	font-family: Helvetica, Arial, Sans-Serif;
+	font-weight: bold;
 }
 
 .loginButtons {
-    padding-left: 20px;
+	padding-left: 20px;
 }
 
 .mainHeading {
-    display: inline;
+	display: inline;
 }
 
 .Account-Label {
-    width: 100px;
+	width: 100px;
 }
 
 .itemsGrid {
-    text-align: center;
-    padding: 5px;   
+	text-align: center;
+	padding: 5px;
 }
 
 .image {
-    height: 251px;
-    width: 251px;
+	height: 251px;
+	width: 251px;
 }
+
 .ListBox {
-    width: 100px;
-}
-
-.colorSwatch1, .colorSwatch2, .colorSwatch3 {
-    height: 120px;
-    width: 120px;
-    position: absolute;
-}
-
-.colorSwatch1 {
-    top: 200px;
-    left: 300px;
-}
-
-.colorSwatch2 {
-    top: 200px;
-    left: 430px;
-}
-
-.colorSwatch3 {
-    top: 200px;
-    left: 560px;
-}
-
-.chairSwatch1, .chairSwatch2, .chairSwatch3 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
-}
-
-.chairSwatch1 {
-    top: 400px;
-    left: 300px;
-}
-
-.chairSwatch2 {
-    top: 400px;
-    left: 500px;
-}
-
-.chairSwatch3 {
-    top: 400px;
-    left: 700px;
-}
-
-.rugSwatch1, .rugSwatch2, .rugSwatch3 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
-}
-
-.rugSwatch1 {
-    top: 350px;
-    left: 1000px;
-}
-
-.rugSwatch2 {
-    top: 550px;
-    left: 1100px;
-}
-
-.rugSwatch3 {
-    top: 750px;
-    left: 1000px;
-}
-
-.roomSwatch1, .roomSwatch2, .roomSwatch3 {
-    height: 144px;
-    width: 144px;
-    position: absolute;
-}
-
-.roomSwatch1 {
-    top: 200px;
-    left: 1450px;
-}
-
-.roomSwatch2 {
-    top: 350px;
-    left: 1400px;
-}
-
-.roomSwatch3 {
-    top: 500px;
-    left: 1450px;
-}
-
-.patternSwatch1, .patternSwatch2, .patternSwatch3 {
-    height: 166px;
-    width: 166px;
-    position: absolute;
-}
-
-.patternSwatch1 {
-    top: 150px;
-    left: 800px;
-}
-
-.patternSwatch2 {
-    top: 150px;
-    left: 980px;
-}
-
-.patternSwatch3 {
-    top: 150px;
-    left: 1160px;
-}
-
-.ottomanSwatch1, .ottomanSwatch2, .ottomanSwatch3 {
-    height: 187px;
-    width: 187px;
-    position: absolute;
-}
-
-.ottomanSwatch1 {
-    top: 600px;
-    left: 400px;
-}
-
-.ottomanSwatch2 {
-    top: 600px;
-    left: 600px;
-}
-
-.ottomanSwatch3 {
-    top: 600px;
-    left: 800px;
+	width: 100px;
 }
 
 .accountPnl {
-    padding-bottom: .2em;
+	padding-bottom: .2em;
 }
 
 .imgChoice {
-    text-align: center;
+	text-align: center;
 }
 
-/* Web responsive styles */
-@media only screen and (max-width: 85.375em) {
-
-    #inspiration {
-        min-height: 950px;
-    }
-
-    .colorSwatch1 {
-        top: 200px;
-        left: 250px;
-    }
-
-    .colorSwatch2 {
-        top: 200px;
-        left: 380px;
-    }
-
-    .colorSwatch3 {
-        top: 200px;
-        left: 510px;
-    }
-
-    .patternSwatch1 {
-        top: 150px;
-        left: 710px;
-    }
-
-    .patternSwatch2 {
-        top: 150px;
-        left: 890px;
-    }
-
-    .patternSwatch3 {
-        top: 150px;
-        left: 1070px;
-    }
-
-    .chairSwatch1 {
-        top: 380px;
-        left: 250px;
-    }
-
-    .chairSwatch2 {
-        top: 380px;
-        left: 450px;
-    }
-
-    .chairSwatch3 {
-        top: 380px;
-        left: 650px;
-    }
-
-    .ottomanSwatch1 {
-        top: 600px;
-        left: 350px;
-    }
-
-    .ottomanSwatch2 {
-        top: 600px;
-        left: 550px;
-    }
-
-    .ottomanSwatch3 {
-        top: 600px;
-        left: 750px;
-    }
-
-    .rugSwatch1 {
-        top: 350px;
-        left: 950px;
-    }
-
-    .rugSwatch2 {
-        top: 550px;
-        left: 1050px;
-    }
-
-    .rugSwatch3 {
-        top: 750px;
-        left: 950px;
-    }
-
-    .roomSwatch1 {
-        top: 800px;
-        left: 300px;
-    }
-
-    .roomSwatch2 {
-        top: 850px;
-        left: 450px;
-    }
-
-    .roomSwatch3 {
-        top: 800px;
-        left: 600px;
-    }
-}
-
-@media only screen and (max-width: 83em) {
-
-    .colorSwatch1 {
-        top: 200px;
-        left: 220px;
-    }
-
-    .colorSwatch2 {
-        top: 200px;
-        left: 350px;
-    }
-
-    .colorSwatch3 {
-        top: 200px;
-        left: 480px;
-    }
-
-    .patternSwatch1 {
-        top: 150px;
-        left: 629px;
-    }
-
-    .patternSwatch2 {
-        top: 150px;
-        left: 809px;
-    }
-
-    .patternSwatch3 {
-        top: 150px;
-        left: 989px;
-    }
-
-    .chairSwatch1 {
-        top: 380px;
-        left: 220px;
-    }
-
-    .chairSwatch2 {
-        top: 380px;
-        left: 420px;
-    }
-
-    .chairSwatch3 {
-        top: 380px;
-        left: 620px;
-    }
-
-    .ottomanSwatch1 {
-        top: 600px;
-        left: 320px;
-    }
-
-    .ottomanSwatch2 {
-        top: 600px;
-        left: 520px;
-    }
-
-    .ottomanSwatch3 {
-        top: 600px;
-        left: 720px;
-    }
-
-    .rugSwatch1 {
-        top: 370px;
-        left: 875px;
-    }
-
-    .rugSwatch2 {
-        top: 570px;
-        left: 975px;
-    }
-
-    .rugSwatch3 {
-        top: 770px;
-        left: 875px;
-    }
-
-    .roomSwatch1 {
-        top: 800px;
-        left: 270px;
-    }
-
-    .roomSwatch2 {
-        top: 850px;
-        left: 420px;
-    }
-
-    .roomSwatch3 {
-        top: 800px;
-        left: 570px;
-    }
-}
 /* Tablet Styles*/
 @media only screen and (max-width: 78em) {
 
-    #wrapper {
-        min-width: 0;
-        width: auto;
-        box-shadow: none;
-        background-color: #FFFFFF;
-    }
+	#wrapper {
+		min-width: 0;
+		width: auto;
+		box-shadow: none;
+		background-color: #FFFFFF;
+	}
 
-    main {
-        margin-left: 0px;
-    }
+	main {
+		margin-left: 0px;
+	}
 
-    nav {
-        background-color: #90C7E3;
-        float: none;
-        width: auto;
-        text-align: center;
-    }
+	nav {
+		background-color: #90C7E3;
+		float: none;
+		width: auto;
+		text-align: center;
+	}
 
-        nav a {
-            display: inline;
-            padding: 8px 25px;
-        }
+		nav a {
+			display: inline;
+			padding: 8px 25px;
+		}
 
-        nav li {
-            display: inline;
-        }
-
-    .colorSwatch1 {
-        top: 240px;
-        left: 145px;
-    }
-
-    .colorSwatch2 {
-        top: 240px;
-        left: 275px;
-    }
-
-    .colorSwatch3 {
-        top: 240px;
-        left: 405px;
-    }
-
-    .patternSwatch1 {
-        top: 190px;
-        left: 575px;
-    }
-
-    .patternSwatch2 {
-        top: 190px;
-        left: 755px;
-    }
-
-    .patternSwatch3 {
-        top: 190px;
-        left: 935px;
-    }
-
-    .chairSwatch1 {
-        top: 420px;
-        left: 145px;
-    }
-
-    .chairSwatch2 {
-        top: 420px;
-        left: 345px;
-    }
-
-    .chairSwatch3 {
-        top: 420px;
-        left: 545px;
-    }
-
-    .ottomanSwatch1 {
-        top: 640px;
-        left: 245px;
-    }
-
-    .ottomanSwatch2 {
-        top: 640px;
-        left: 445px;
-    }
-
-    .ottomanSwatch3 {
-        top: 640px;
-        left: 645px;
-    }
-
-    .rugSwatch1 {
-        top: 410px;
-        left: 845px;
-    }
-
-    .rugSwatch2 {
-        top: 610px;
-        left: 945px;
-    }
-
-    .rugSwatch3 {
-        top: 810px;
-        left: 845px;
-    }
-
-    .roomSwatch1 {
-        top: 840px;
-        left: 195px;
-    }
-
-    .roomSwatch2 {
-        top: 890px;
-        left: 345px;
-    }
-
-    .roomSwatch3 {
-        top: 840px;
-        left: 495px;
-    }
-}
-
-@media only screen and (max-width: 73em) {
-
-    .colorSwatch1 {
-        top: 250px;
-        left: 50px;
-    }
-
-    .colorSwatch2 {
-        top: 250px;
-        left: 180px;
-    }
-
-    .colorSwatch3 {
-        top: 250px;
-        left: 310px;
-    }
-
-    .patternSwatch1 {
-        top: 200px;
-        left: 461px;
-    }
-
-    .patternSwatch2 {
-        top: 200px;
-        left: 651px;
-    }
-
-    .patternSwatch3 {
-        top: 200px;
-        left: 841px;
-    }
-
-    .chairSwatch1 {
-        top: 430px;
-        left: 50px;
-    }
-
-    .chairSwatch2 {
-        top: 430px;
-        left: 250px;
-    }
-
-    .chairSwatch3 {
-        top: 430px;
-        left: 450px;
-    }
-
-    .ottomanSwatch1 {
-        top: 650px;
-        left: 150px;
-    }
-
-    .ottomanSwatch2 {
-        top: 650px;
-        left: 350px;
-    }
-
-    .ottomanSwatch3 {
-        top: 650px;
-        left: 550px;
-    }
-
-    .rugSwatch1 {
-        top: 450px;
-        left: 722.5px;
-    }
-
-    .rugSwatch2 {
-        top: 650px;
-        left: 822.5px;
-    }
-
-    .rugSwatch3 {
-        top: 850px;
-        left: 722.5px;
-    }
-
-    .roomSwatch1 {
-        top: 850px;
-        left: 72.5px;
-    }
-
-    .roomSwatch2 {
-        top: 900px;
-        left: 222.5px;
-    }
-
-    .roomSwatch3 {
-        top: 850px;
-        left: 372.5px;
-    }
-}
-
-@media only screen and (max-width: 65em) {
-
-    #inspiration {
-        min-height: 950px;
-    }
-
-    .colorSwatch1 {
-        top: 250px;
-        left: 17px;
-    }
-
-    .colorSwatch2 {
-        top: 250px;
-        left: 147px;
-    }
-
-    .colorSwatch3 {
-        top: 250px;
-        left: 277px;
-    }
-
-    .patternSwatch1 {
-        top: 200px;
-        left: 412px;
-    }
-
-    .patternSwatch2 {
-        top: 200px;
-        left: 587px;
-    }
-
-    .patternSwatch3 {
-        top: 200px;
-        left: 762px;
-    }
-
-    .chairSwatch1 {
-        top: 430px;
-        left: 17px;
-    }
-
-    .chairSwatch2 {
-        top: 430px;
-        left: 217px;
-    }
-
-    .chairSwatch3 {
-        top: 430px;
-        left: 417px;
-    }
-
-    .ottomanSwatch1 {
-        top: 650px;
-        left: 90px;
-    }
-
-    .ottomanSwatch2 {
-        top: 650px;
-        left: 290px;
-    }
-
-    .ottomanSwatch3 {
-        top: 650px;
-        left: 490px;
-    }
-
-    .rugSwatch1 {
-        top: 450px;
-        left: 690px;
-    }
-
-    .rugSwatch2 {
-        top: 650px;
-        left: 740px;
-    }
-
-    .rugSwatch3 {
-        top: 850px;
-        left: 690px;
-    }
-
-    .roomSwatch1 {
-        top: 850px;
-        left: 47px;
-    }
-
-    .roomSwatch2 {
-        top: 900px;
-        left: 197px;
-    }
-
-    .roomSwatch3 {
-        top: 850px;
-        left: 347px;
-    }
+		nav li {
+			display: inline;
+		}
 }
 
 @media only screen and (max-width: 60em) {
-    main {
-        background-color: white;
-    }
-
-    .colorSwatch1 {
-        top: 250px;
-        left: 42.5px;
-    }
-
-    .colorSwatch2 {
-        top: 250px;
-        left: 172.5px;
-    }
-
-    .colorSwatch3 {
-        top: 250px;
-        left: 302.5px;
-    }
-
-    .patternSwatch1 {
-        top: 200px;
-        left: 457.5px;
-    }
-
-    .patternSwatch2 {
-        top: 200px;
-        left: 647.5px;
-    }
-
-    .patternSwatch3 {
-        top: 200px;
-        left: 837.5px;
-    }
-
-    .chairSwatch1 {
-        top: 430px;
-        left: 42.5px;
-    }
-
-    .chairSwatch2 {
-        top: 430px;
-        left: 242.5px;
-    }
-
-    .chairSwatch3 {
-        top: 430px;
-        left: 442.5px;
-    }
-
-    .ottomanSwatch1 {
-        top: 650px;
-        left: 122.5px;
-    }
-
-    .ottomanSwatch2 {
-        top: 650px;
-        left: 322.5px;
-    }
-
-    .ottomanSwatch3 {
-        top: 650px;
-        left: 522.5px;
-    }
-
-    .rugSwatch1 {
-        top: 420px;
-        left: 722.5px;
-    }
-
-    .rugSwatch2 {
-        top: 620px;
-        left: 822.5px;
-    }
-
-    .rugSwatch3 {
-        top: 820px;
-        left: 722.5px;
-    }
-
-    .roomSwatch1 {
-        top: 850px;
-        left: 72.5px;
-    }
-
-    .roomSwatch2 {
-        top: 900px;
-        left: 222.5px;
-    }
-
-    .roomSwatch3 {
-        top: 850px;
-        left: 372.5px;
-    }
+	main {
+		background-color: white;
+	}
 }
 /* Smaller Web Styles */
 @media only screen and (max-width: 42em) {
 
-    nav, main, #wrapper, header {
-        min-width: 434px;
-    }
+	nav, main, #wrapper, header {
+		min-width: 434px;
+	}
 
-        nav li {
-            display: block;
-            margin: 0;
-            border-bottom: 2px solid #024864;
-        }
-
-    #inspiration {
-        min-height: 1350px;
-    }
-
-    .colorSwatch1 {
-        top: 400px;
-        left: 20px;
-    }
-
-    .colorSwatch2 {
-        top: 400px;
-        left: 150px;
-    }
-
-    .colorSwatch3 {
-        top: 400px;
-        left: 280px;
-    }
-
-    .patternSwatch1 {
-        top: 730px;
-        left: 80px;
-    }
-
-    .patternSwatch2 {
-        top: 730px;
-        left: 260px;
-    }
-
-    .patternSwatch3 {
-        top: 730px;
-        left: 440px;
-    }
-
-    .chairSwatch1 {
-        top: 540px;
-        left: 20px;
-    }
-
-    .chairSwatch2 {
-        top: 540px;
-        left: 220px;
-    }
-
-    .chairSwatch3 {
-        top: 540px;
-        left: 420px;
-    }
-
-    .ottomanSwatch1 {
-        top: 930px;
-        left: 20px;
-    }
-
-    .ottomanSwatch2 {
-        top: 930px;
-        left: 220px;
-    }
-
-    .ottomanSwatch3 {
-        top: 930px;
-        left: 420px;
-    }
-
-    .rugSwatch1 {
-        top: 1120px;
-        left: 420px;
-    }
-
-    .rugSwatch2 {
-        top: 1300px;
-        left: 320px;
-    }
-
-    .rugSwatch3 {
-        top: 1480px;
-        left: 420px;
-    }
-
-    .roomSwatch1 {
-        top: 1120px;
-        left: 70px;
-    }
-
-    .roomSwatch2 {
-        top: 1280px;
-        left: 120px;
-    }
-
-    .roomSwatch3 {
-        top: 1440px;
-        left: 70px;
-    }
-}
-
-@media only screen and (max-width: 39em) {
-    main {
-        background-color: red;
-    }
+		nav li {
+			display: block;
+			margin: 0;
+			border-bottom: 2px solid #024864;
+		}
 }
 
 @media only screen and (max-device-width: 80em) {
 
-    #wrapper {
-        min-width: 0;
-        width: auto;
-        box-shadow: none;
-        background-color: #FFFFFF;
-    }
+	#wrapper {
+		min-width: 0;
+		width: auto;
+		box-shadow: none;
+		background-color: #FFFFFF;
+	}
 
-    main {
-        margin-left: 0px;
-    }
+	main {
+		margin-left: 0px;
+	}
 
-    nav {
-        background-color: #90C7E3;
-        float: none;
-        width: auto;
-        text-align: center;
-    }
+	nav {
+		background-color: #90C7E3;
+		float: none;
+		width: auto;
+		text-align: center;
+	}
 
-        nav a {
-            display: inline;
-            padding: 8px 25px;
-        }
+		nav a {
+			display: inline;
+			padding: 8px 25px;
+		}
 
-        nav li {
-            display: inline;
-        }
-
-    .colorSwatch1 {
-        top: 240px;
-        left: 145px;
-    }
-
-    .colorSwatch2 {
-        top: 240px;
-        left: 275px;
-    }
-
-    .colorSwatch3 {
-        top: 240px;
-        left: 405px;
-    }
-
-    .patternSwatch1 {
-        top: 190px;
-        left: 575px;
-    }
-
-    .patternSwatch2 {
-        top: 190px;
-        left: 755px;
-    }
-
-    .patternSwatch3 {
-        top: 190px;
-        left: 935px;
-    }
-
-    .chairSwatch1 {
-        top: 420px;
-        left: 145px;
-    }
-
-    .chairSwatch2 {
-        top: 420px;
-        left: 345px;
-    }
-
-    .chairSwatch3 {
-        top: 420px;
-        left: 545px;
-    }
-
-    .ottomanSwatch1 {
-        top: 640px;
-        left: 245px;
-    }
-
-    .ottomanSwatch2 {
-        top: 640px;
-        left: 445px;
-    }
-
-    .ottomanSwatch3 {
-        top: 640px;
-        left: 645px;
-    }
-
-    .rugSwatch1 {
-        top: 410px;
-        left: 845px;
-    }
-
-    .rugSwatch2 {
-        top: 610px;
-        left: 945px;
-    }
-
-    .rugSwatch3 {
-        top: 810px;
-        left: 845px;
-    }
-
-    .roomSwatch1 {
-        top: 840px;
-        left: 195px;
-    }
-
-    .roomSwatch2 {
-        top: 890px;
-        left: 345px;
-    }
-
-    .roomSwatch3 {
-        top: 840px;
-        left: 495px;
-    }
+		nav li {
+			display: inline;
+		}
 }
 
 /* Phone Styles */
 @media only screen and (max-device-width: 67.5em) {
 
-    nav, main, #wrapper, header {
-        min-width: 434px;
-    }
+	nav, main, #wrapper, header {
+		min-width: 434px;
+	}
 
-        nav li {
-            display: block;
-            margin: 0;
-            border-bottom: 2px solid #024864;
-        }
-
-    #inspiration {
-        min-height: 975px;
-    }
-
-    .colorSwatch1 {
-        top: 415px;
-        left: 22.5px;
-    }
-
-    .colorSwatch2 {
-        top: 415px;
-        left: 152.5px;
-    }
-
-    .colorSwatch3 {
-        top: 415px;
-        left: 282.5px;
-    }
-
-    .patternSwatch1 {
-        top: 365px;
-        left: 432.5px;
-    }
-
-    .patternSwatch2 {
-        top: 365px;
-        left: 612.5px;
-    }
-
-    .patternSwatch3 {
-        top: 365px;
-        left: 792.5px;
-    }
-
-    .chairSwatch1 {
-        top: 595px;
-        left: 32.5px;
-    }
-
-    .chairSwatch2 {
-        top: 595px;
-        left: 232.5px;
-    }
-
-    .chairSwatch3 {
-        top: 595px;
-        left: 432.5px;
-    }
-
-    .ottomanSwatch1 {
-        top: 815px;
-        left: 112.5px;
-    }
-
-    .ottomanSwatch2 {
-        top: 815px;
-        left: 312.5px;
-    }
-
-    .ottomanSwatch3 {
-        top: 815px;
-        left: 512.5px;
-    }
-
-    .rugSwatch1 {
-        top: 585px;
-        left: 712.5px;
-    }
-
-    .rugSwatch2 {
-        top: 785px;
-        left: 785.5px;
-    }
-
-    .rugSwatch3 {
-        top: 985px;
-        left: 712.5px;
-    }
-
-    .roomSwatch1 {
-        top: 1015px;
-        left: 62.5px;
-    }
-
-    .roomSwatch2 {
-        top: 1065px;
-        left: 212.5px;
-    }
-
-    .roomSwatch3 {
-        top: 1015px;
-        left: 362.5px;
-    }
+		nav li {
+			display: block;
+			margin: 0;
+			border-bottom: 2px solid #024864;
+		}
 }

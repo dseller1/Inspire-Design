@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Nation Wars</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <header>
+                <div class="leftpad"></div>
+                <h1>Nation Wars</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="AttackCalc.aspx">Attack Calc</a></li>
+                    <li><a href="LandGrab.aspx">Land Grab</a></li>
+                    <li><a href="Casher.aspx">Casher</a></li>
+                    <li><a href="WarCalc.aspx">War Calc</a></li>
+                    <li><a href="WarAttacks.aspx">War Attacks</a></li>
+                    <li><a href="Production.aspx">Production</a></li>
+                    <li><a href="Settings.aspx">Settings</a></li>
+                </ul>
+            </nav>
+            <main>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+    </form>
+</body>
+</html>
