@@ -8,7 +8,18 @@
             <div aria-orientation="vertical">
                 <div aria-orientation="horizontal">
                     <asp:Label runat="server" Text="Paste Espionage Info" Width="155" />
-                    <asp:TextBox runat="server" ID="defWarArmyInfo" CssClass="TextBox" Width="100" />
+                    <asp:TextBox runat="server" ID="defWarArmyInfo" CssClass="TextBox" Width="100" ToolTip="Military Espionage Report                                  
+State: Rawr(#156)[Rawr]                                      
+Readiness 100%                                                  
+Intelligence Readiness 100%                                                            
+Army 	                                    Nation Army 	      Upgrades
+Spies:    123.123.120 	    123.123.120 	       Level:7
+Infantry: 157.883.719 	    280.223.407 	       Level:8
+Tanks:    123.123.120 	    123.123.123 	       Level:1
+Jets:     123.123.120 	    123.123.120 	       Level:8
+Bombers:  123.123.120 	    123.123.120 	       Level:1
+SAMs:     123.123.120 	    123.123.120 	       Level:1
+Ships:    123.123.120 	    123.123.120 	       Level:8" />
                     <asp:Button runat="server" ID="defWarClearBtn" Background="GhostWhite" Text="Clear" OnClick="defWarClearBtn_Click" CssClass="Button" />
                     <asp:Button runat="server" ID="btnWarCalculate" Background="GhostWhite" Text="Calculate" OnClick="btnWarCalculate_Click" CssClass="Button" />
                 </div>
